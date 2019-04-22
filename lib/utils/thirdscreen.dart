@@ -1,13 +1,23 @@
+import 'package:camsa_login/ui/login_page.dart';
 import 'package:flutter/material.dart';
 
-class ThirdSecreen extends StatelessWidget{
+class ThirdSecreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final titles = ['Mis servicios', 'boat', 'bus', 'car',
+    'railway', 'run', 'subway', 'transit', 'walk'
+    ];
+
+    final icons = [Icons.filter_vintage, Icons.filter_vintage,
+    Icons.filter_vintage, Icons.filter_vintage, Icons.filter_vintage,
+    Icons.filter_vintage, Icons.filter_vintage, Icons.filter_vintage,
+    Icons.filter_vintage,
+    ];
     return Scaffold(
 
       appBar: AppBar(
-        title: Text ("Tercera vista"),
-          centerTitle: true,
+        title: Text("Tercera vista"),
+        centerTitle: true,
       ),
       endDrawer: Drawer(
         elevation: 20.0,
@@ -15,7 +25,7 @@ class ThirdSecreen extends StatelessWidget{
           padding: EdgeInsets.zero,
           children: <Widget>[
             UserAccountsDrawerHeader(
-              accountName: Text('David Robles'),
+              accountName: Text('Antonio'),
               accountEmail: Text('alonso1611@hotmail.com'),
               currentAccountPicture:
               Image(
@@ -27,7 +37,7 @@ class ThirdSecreen extends StatelessWidget{
             ),
             ListTile(
               leading: Icon(Icons.account_circle),
-              title: Text('Menú'),
+              title: Text('Configuració'),
               onTap: () {
                 Navigator.pop(context);
               },
@@ -37,7 +47,7 @@ class ThirdSecreen extends StatelessWidget{
             ),
             ListTile(
               leading: Icon(Icons.accessibility),
-              title: Text('Pagos'),
+              title: Text('Ayuda'),
               onTap: () {
                 Navigator.pop(context);
               },
@@ -47,27 +57,32 @@ class ThirdSecreen extends StatelessWidget{
             ),
             ListTile(
               leading: Icon(Icons.account_box),
-              title: Text('Opinión'),
-              onTap: () {
-                Navigator.pop(context);
-              },
+              title: Text('Cerrrar sesión'),
             )
           ],
         ),
 
       ),
       backgroundColor: Color(0xFF1A2672),
-      body: Center(
-        child: RaisedButton(
-          onPressed: () {
-            // Navigate back to first screen when tapped!
-          },
-          child: Text('Tercera vista'),
-        ),
+      body:
+      ListView.builder(
+        itemCount: titles.length,
+        itemBuilder: (context, index) {
+          return Card( //<-- Card widget
+            child: ListTile(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ThirdSecreen()),
+                );
+              },
+              leading: Icon(icons[index]),
+              title: Text(titles[index]),
+            ),
+          );
+        },
       ),
 
     );
-
   }
-
 }

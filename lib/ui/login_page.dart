@@ -1,12 +1,11 @@
 import 'package:camsa_login/creaci%C3%B3ncuenta.dart';
-import 'package:camsa_login/utils/thirdscreen.dart';
+import 'package:camsa_login/secondscreen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/material.dart' as prefix0;
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:camsa_login/style/theme.dart' as Theme;
 import 'package:camsa_login/utils/bubble_indication_painter.dart';
-import 'package:camsa_login/secondscreen.dart';
+
 
 class LoginPage extends StatefulWidget {
   LoginPage({Key key}) : super(key: key);
@@ -241,7 +240,7 @@ class _LoginPageState extends State<LoginPage>
                               keyboardType: TextInputType.emailAddress,
                               validator: (value) {
                                 if (value.isEmpty) {
-                                  return 'Porfavor ingrese su ID';
+                                  return 'Por favor ingrese su ID';
                                 }
                               },
                               style: TextStyle(
@@ -310,17 +309,17 @@ class _LoginPageState extends State<LoginPage>
                   Container(
                     margin: EdgeInsets.only(top: 200.0),
                     decoration:  BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(5.0)),
+                      borderRadius: BorderRadius.all(Radius.circular(30.0)),
                       boxShadow: <BoxShadow>[
                         BoxShadow(
                           color: Theme.Colors.loginGradientStart,
-                          offset: Offset(1.0, 6.0),
-                          blurRadius: 20.0,
+                          offset: Offset(1.0, 2.0),
+                          blurRadius: 5.0,
                         ),
                         BoxShadow(
                           color: Theme.Colors.loginGradientEnd,
-                          offset: Offset(1.0, 6.0),
-                          blurRadius: 20.0,
+                          offset: Offset(1.0, 2.0),
+                          blurRadius: 5.0,
                         ),
                       ],
                       gradient:  LinearGradient(
@@ -336,10 +335,9 @@ class _LoginPageState extends State<LoginPage>
                     child: MaterialButton(
                       highlightColor: Colors.transparent,
                       splashColor: Theme.Colors.loginGradientEnd,
-                      //shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(5.0))),
                       child: Padding(
                         padding: const EdgeInsets.symmetric(
-                            vertical: 10.0, horizontal: 42.0),
+                            vertical: 10.0, horizontal: 20.0),
                         child: Text(
                           "Ingresar",
                           style: TextStyle(
@@ -349,13 +347,19 @@ class _LoginPageState extends State<LoginPage>
                         ),
                       ),
                       onPressed: () {
+                        //Navigator.pushNamed(context, '/second');
+                       /* Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => SecondScreen()),
+                        );*/
+                        Navigator.pushNamedAndRemoveUntil(context, '/second', (_) => false);
                         //showInSnackBar("Iniciando Sesión")),
-                      if (_formKey1.currentState.validate()) {
+                      /*if (_formKey1.currentState.validate()) {
                              Navigator.push(
                                      context,
                              MaterialPageRoute(builder: (context) => SecondScreen()),
                                     );
-                                }
+                                }*/
                          },
 
                     ),
@@ -551,17 +555,17 @@ class _LoginPageState extends State<LoginPage>
                 Container(
                   margin: EdgeInsets.only(top: 105.0),
                   decoration:  BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(5.0)),
+                    borderRadius: BorderRadius.all(Radius.circular(30.0)),
                     boxShadow: <BoxShadow>[
                       BoxShadow(
                         color: Theme.Colors.loginGradientStart,
-                        offset: Offset(1.0, 6.0),
-                        blurRadius: 20.0,
+                        offset: Offset(1.0, 2.0),
+                        blurRadius: 5.0,
                       ),
                       BoxShadow(
                         color: Theme.Colors.loginGradientEnd,
-                        offset: Offset(1.0, 6.0),
-                        blurRadius: 20.0,
+                        offset: Offset(1.0, 2.0),
+                        blurRadius: 5.0,
                       ),
                     ],
                     gradient:  LinearGradient(
