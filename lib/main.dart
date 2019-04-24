@@ -1,4 +1,5 @@
 
+
 import 'package:camsa_login/secondscreen.dart';
 import 'package:flutter/material.dart';
 import 'package:camsa_login/ui/login_page.dart';
@@ -21,9 +22,12 @@ class MyApp extends StatelessWidget {
         '/': (context) => LoginPage(),
 
         '/second': (context) => SecondScreen(),
+
+
+
       },
 
-    //  home: LoginPage(),
+      //home: LoginPage(),
 
     );
   }

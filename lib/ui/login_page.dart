@@ -179,12 +179,12 @@ class _LoginPageState extends State<LoginPage>
                 highlightColor: Colors.transparent,
                 onPressed: _onSignInButtonPress,
                 child: Text(
-                  "Ingresar",
-                  style: TextStyle(
-                      color: left,
-                      fontSize: 16.0,
-                      fontFamily: "WorkSansSemiBold"),
-                ),
+                "Ingresar",
+                style: TextStyle(
+                    color: left,
+                    fontSize: 16.0,
+                    fontFamily: "WorkSansSemiBold"),
+              ),
               ),
             ),
             //Container(height: 33.0, width: 1.0, color: Colors.white),
@@ -240,7 +240,7 @@ class _LoginPageState extends State<LoginPage>
                               keyboardType: TextInputType.emailAddress,
                               validator: (value) {
                                 if (value.isEmpty) {
-                                  return 'Por favor ingrese su ID';
+                                  return 'Por favor ingrese su número de cliente';
                                 }
                               },
                               style: TextStyle(
@@ -254,7 +254,7 @@ class _LoginPageState extends State<LoginPage>
                                   color: Colors.black,
                                   size: 22.0,
                                 ),
-                                hintText: "ID",
+                                hintText: "Número de cliente",
                                 hintStyle: TextStyle(
                                     fontFamily: "WorkSansSemiBold", fontSize: 17.0),
                               ),
@@ -504,7 +504,7 @@ class _LoginPageState extends State<LoginPage>
                             controller: myController,
                             validator: (value) {
                               if (value.isEmpty) {
-                                return 'Porfavor ingrese su ID';
+                                return 'Por favor ingrese su número de cliente';
                               }
                             },
                             style: TextStyle(
@@ -517,7 +517,7 @@ class _LoginPageState extends State<LoginPage>
                                 FontAwesomeIcons.user,
                                 color: Colors.black,
                               ),
-                              hintText: "ID",
+                              hintText: "Número de cliente",
                               hintStyle: TextStyle(
                                   fontFamily: "WorkSansSemiBold", fontSize: 16.0),
                             ),
@@ -585,9 +585,10 @@ class _LoginPageState extends State<LoginPage>
                       // Validate will return true if the form is valid, or false if
                       // the form is invalid.
                       if (_formKey2.currentState.validate()) {
+                       // Navigator.pushNamedAndRemoveUntil(context, '/support', (_) => false);
                         Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => CreacionCuenta()),
+                            context,
+                            MaterialPageRoute(builder: (context) => CreacionCuenta()),
                         );
                       }
                     },

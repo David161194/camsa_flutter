@@ -1,4 +1,4 @@
-#Mon Apr 22 17:44:21 CDT 2019
-base.0=C\:\\Users\\ajsanchez\\IdeaProjects\\camsa_flutter\\build\\app\\intermediates\\transforms\\dexMerger\\debug\\0
+#Tue Apr 23 20:27:21 CDT 2019
+base.0=C\:\\Users\\alons\\IdeaProjects\\camsa_flutter - copia\\build\\app\\intermediates\\transforms\\dexMerger\\debug\\0
 path.0=classes.dex
 renamed.0=classes.dex

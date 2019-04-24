@@ -73,7 +73,7 @@ flutter:
   # see https://flutter.io/custom-fonts/#from-packages
   assets:
     - assets/Logo2.png
-
+    - assets/cafe.jpg
 
 
   fonts:
