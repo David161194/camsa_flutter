@@ -24,6 +24,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
   font_awesome_flutter: ^8.4.0
+  flutter_rating: ^0.0.2
 
 dev_dependencies:
   flutter_test:
@@ -74,7 +75,9 @@ flutter:
   assets:
     - assets/Logo2.png
     - assets/cafe.jpg
-
+    - assets/Logoof.png
+    - assets/volante_e-02.png
+    - assets/icono1.jpg
 
   fonts:
     - family: WorkSansSemiBold
@@ -88,4 +91,14 @@ flutter:
     - family: WorkSansMedium
       fonts:
         - asset: assets/fonts/Work_Sans/WorkSans-Medium.ttf
+
+    - family: Doritos
+      fonts:
+        - asset: assets/fonts/Pier_Sans/PierSans-Light.otf
+
+    - family: Sabritas
+      fonts:
+        - asset: assets/fonts/Pier_Sans/PierSans-Medium.otf
+
+
 

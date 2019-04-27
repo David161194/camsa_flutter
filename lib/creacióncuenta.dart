@@ -7,7 +7,7 @@ class CreacionCuenta extends StatelessWidget{
   Widget build(BuildContext context) {
     // TODO: implement build
     return  Scaffold(
-      backgroundColor: Color(0xFF1A2672),
+      backgroundColor: Color(0xFF1D539B),
 
 
       body: Center(
@@ -15,12 +15,12 @@ class CreacionCuenta extends StatelessWidget{
             mainAxisSize: MainAxisSize.max,
             children: [
               Container(
-                padding: EdgeInsets.only(top: 25.0),
+                padding: EdgeInsets.only(top: 50.0),
           child:  Image(
-            width: 250.0,
-            height: 150.0,
-            fit: BoxFit.fill,
-            image:  AssetImage('assets/img/Logo2.png'),
+              width: 100.0,
+              height: 70.0,
+              fit: BoxFit.fill,
+              image:  AssetImage('assets/img/Logoof.png')
           ),
         ),
         Container (
@@ -62,7 +62,7 @@ class CreacionCuenta extends StatelessWidget{
                                      context,
                                      MaterialPageRoute(builder: (context) => LoginPage()),
                                  );*/
-                                 Navigator.pushNamedAndRemoveUntil(context, '/', (_) => false);
+                                 Navigator.pushNamedAndRemoveUntil(context, '/mante', (_) => false);
                                },
                              ),
 

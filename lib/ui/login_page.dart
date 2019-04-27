@@ -1,5 +1,4 @@
 import 'package:camsa_login/creaci%C3%B3ncuenta.dart';
-import 'package:camsa_login/secondscreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -74,12 +73,13 @@ class _LoginPageState extends State<LoginPage>
               mainAxisSize: MainAxisSize.max,
               children: <Widget>[
                 Padding(
-                  padding: EdgeInsets.only(top: 25.0),
+                  padding: EdgeInsets.only(top: 50.0),
                   child:  Image(
-                      width: 250.0,
-                      height: 150.0,
+                      width: 100.0,
+                      height: 70.0,
                       fit: BoxFit.fill,
-                      image:  AssetImage('assets/img/Logo2.png')),
+                      image:  AssetImage('assets/img/Logoof.png')
+                  ),
                 ),
                 Padding(
                   padding: EdgeInsets.only(top: 20.0),
@@ -312,20 +312,15 @@ class _LoginPageState extends State<LoginPage>
                       borderRadius: BorderRadius.all(Radius.circular(30.0)),
                       boxShadow: <BoxShadow>[
                         BoxShadow(
-                          color: Theme.Colors.loginGradientStart,
+                          color: Theme.Colors.loginGradientEnd2,
                           offset: Offset(1.0, 2.0),
-                          blurRadius: 5.0,
-                        ),
-                        BoxShadow(
-                          color: Theme.Colors.loginGradientEnd,
-                          offset: Offset(1.0, 2.0),
-                          blurRadius: 5.0,
+                          blurRadius: 3.0,
                         ),
                       ],
                       gradient:  LinearGradient(
                           colors: [
-                            Theme.Colors.loginGradientEnd,
-                            Theme.Colors.loginGradientStart
+                            Theme.Colors.loginGradientEnd2,
+                            Theme.Colors.loginGradientStart2
                           ],
                           begin: const FractionalOffset(0.2, 0.2),
                           end: const FractionalOffset(1.0, 1.0),
@@ -334,7 +329,7 @@ class _LoginPageState extends State<LoginPage>
                     ),
                     child: MaterialButton(
                       highlightColor: Colors.transparent,
-                      splashColor: Theme.Colors.loginGradientEnd,
+                      splashColor: Theme.Colors.loginGradientEnd2,
                       child: Padding(
                         padding: const EdgeInsets.symmetric(
                             vertical: 10.0, horizontal: 20.0),
@@ -558,20 +553,14 @@ class _LoginPageState extends State<LoginPage>
                     borderRadius: BorderRadius.all(Radius.circular(30.0)),
                     boxShadow: <BoxShadow>[
                       BoxShadow(
-                        color: Theme.Colors.loginGradientStart,
+                        color: Theme.Colors.loginGradientEnd2,
                         offset: Offset(1.0, 2.0),
-                        blurRadius: 5.0,
+                        blurRadius: 3.0,
                       ),
-                      BoxShadow(
-                        color: Theme.Colors.loginGradientEnd,
-                        offset: Offset(1.0, 2.0),
-                        blurRadius: 5.0,
-                      ),
-                    ],
-                    gradient:  LinearGradient(
+                    ],                    gradient:  LinearGradient(
                         colors: [
-                          Theme.Colors.loginGradientEnd,
-                          Theme.Colors.loginGradientStart
+                          Theme.Colors.loginGradientEnd2,
+                          Theme.Colors.loginGradientStart2
                         ],
                         begin: const FractionalOffset(0.2, 0.2),
                         end: const FractionalOffset(1.0, 1.0),
