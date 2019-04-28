@@ -98,12 +98,13 @@ El costo del servicio es de 400 MXN"""),
                             return AlertDialog(
                               title: Text("Solicitar técnico"),
                               content:  Text("""En un momento nos comunicaremos con usted 
-para concluir con la solicitud."""),
+para concluir con la solicitud. Muchas gracias."""),
                               actions: <Widget>[
                                 FlatButton(
                                   child:  Text("Aceptar"),
                                   onPressed: () {
-                                    Navigator.pushNamedAndRemoveUntil(context, '/mante', (_) => false);
+                                   Navigator.pushNamedAndRemoveUntil(context, '/mante', (_) => false);
+                                    //Navigator.popUntil(context, ModalRoute.withName('/mante'));
                                   },
                                 ),
 

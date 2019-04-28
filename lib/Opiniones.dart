@@ -205,8 +205,7 @@ class _LoginPageState extends State<Opiniones>{
                             ),
                           ),
                         ),
-                          Container(
-                          ),
+                          //Container(),
                           InkWell(
                             onTap: () {
                              /* Navigator.push(

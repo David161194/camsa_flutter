@@ -1,7 +1,6 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 
-class Mis_servicios extends StatelessWidget {
+
+/*class Mis_servicios extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -76,7 +75,7 @@ class Mis_servicios extends StatelessWidget {
                 child: Row(
                   children: <Widget>[
 
-                    Expanded(
+                   /* Expanded(
                       flex: 5,
                       child: SizedBox(
                         height: 35.0,
@@ -90,11 +89,13 @@ class Mis_servicios extends StatelessWidget {
                         ),
                       ),
 
-                    ),
+                    ),*/
 
                     Expanded(
                       flex: 5,
-                      child: SizedBox(
+                      child: Container(
+                        color: Color(0xFF1D539B),
+                        width: 35.0,
                         height: 35.0,
                         child:  MyStatefulWidget(),
                       ),
@@ -321,36 +322,547 @@ class Mis_servicios extends StatelessWidget {
 
     );
   }
+}*/
+
+import "package:flutter/material.dart";
+
+
+class Mis_servicios extends StatefulWidget {
+  @override
+  _DropDownButtonState createState() => _DropDownButtonState();
 }
 
-String dropdownValue = 'One';
+class _DropDownButtonState extends State<Mis_servicios> {
+  var _value = "1";
 
-class MyStatefulWidget extends StatefulWidget {
-  MyStatefulWidget({Key key}) : super(key: key);
+  DropdownButton _itemDown() => DropdownButton<String>(
+    items: [
+      DropdownMenuItem(
+        value: "1",
+        child: Row(
+
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            Icon(Icons.account_circle,
+              color: Colors.white,
+            ),
+            SizedBox(width: 10),
+            Text(
+              "Cuenta",
+            ),
+          ],
+        ),
+      ),
+      DropdownMenuItem(
+        value: "2",
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            Icon(Icons.account_circle,
+              color: Colors.white,
+            ),
+
+            SizedBox(width: 10),
+            Text(
+              "Cuenta 1",
+            ),
+          ],
+        ),
+      ),
+    ],
+    onChanged: (value) {
+      setState(() {
+        _value = value;
+      });
+    },
+
+    value: _value,
+    elevation: 2,
+
+  style: TextStyle(
+    color: Colors.amberAccent,
+    fontSize: 18.0,
+    fontFamily: "Sabritas",
+  ),
+  );
+  DropdownButton _itemDown2() => DropdownButton<String>(
+    items: [
+
+      DropdownMenuItem(
+        value: "1",
+        child: Row(
+
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            Icon(Icons.account_circle,
+              color: Colors.white,
+            ),
+            SizedBox(width: 10),
+            Text(
+              "Monitoreo",
+            ),
+          ],
+        ),
+      ),
+
+      DropdownMenuItem(
+        value: "2",
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            Icon(Icons.account_circle,
+              color: Colors.white,
+            ),
+
+            SizedBox(width: 10),
+            Text(
+              "Monitoreo 1",
+            ),
+          ],
+        ),
+      ),
+    ],
+    onChanged: (value) {
+      setState(() {
+        _value = value;
+      });
+    },
+
+    value: _value,
+    elevation: 2,
+
+    style: TextStyle(
+      color: Colors.amberAccent,
+      fontSize: 18.0,
+      fontFamily: "Sabritas",
+    ),
+  );
 
   @override
-  _MyStatefulWidgetState createState() => _MyStatefulWidgetState();
-}
-
-class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: DropdownButton<String>(
-          value: dropdownValue,
-          onChanged: (String newValue) {
-            setState(() {
-              dropdownValue = newValue;
-            });
-          },
-          items: <String>['One', 'Two', 'Free', 'Four']
-              .map<DropdownMenuItem<String>>((String value) {
-            return DropdownMenuItem<String>(
-              value: value,
-              child: Text(value),
-            );
-          }).toList(),
+      appBar: AppBar(
+        title: Text("Mis servicios",
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 18.0,
+            fontFamily: "Sabritas",
+          ),
         ),
+        centerTitle: true,
+        backgroundColor: Color(0xFF1D539B),
+      ),
+      endDrawer: Drawer(
+        elevation: 10.0,
+        child: ListView(
+
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            UserAccountsDrawerHeader(
+              accountName: Text('Antonio'),
+              accountEmail: Text('alonso1611@hotmail.com'),
+              currentAccountPicture:
+              Image(
+                  width: 500.0,
+                  height: 300.0,
+                  fit: BoxFit.fill,
+                  image: AssetImage('assets/img/Logo2.png')),
+              decoration: BoxDecoration(color: Color(0xFF1D539B)),
+            ),
+            ListTile(
+              leading: Icon(Icons.account_circle),
+              title: Text('Configuración'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+            Divider(
+              height: 2.0,
+            ),
+            ListTile(
+              leading: Icon(Icons.accessibility),
+              title: Text('Ayuda'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+            Divider(
+              height: 2.0,
+            ),
+            ListTile(
+              leading: Icon(Icons.account_box),
+              title: Text('Cerrrar sesión'),
+              onTap: () {
+                //Navigator.popUntil(context, ModalRoute.withName('/'));
+                Navigator.pushNamedAndRemoveUntil(context, '/', (_) => false);
+              },
+            )
+          ],
+        ),
+      ),
+      body: SingleChildScrollView(
+        child: Center(
+          child: Column(
+          children: <Widget>[
+            Container(
+              height: 40,
+            ),
+            Container(
+              padding: EdgeInsets.symmetric(horizontal: 50),
+              color: Color(0xFF1D539B),
+              child: _itemDown(),
+            ),
+            Container(
+              height: 40,
+            ),
+            Container(
+              padding: EdgeInsets.symmetric(horizontal: 36),
+              color: Color(0xFF1D539B),
+              child: _itemDown2(),
+            ),
+            Container(
+              height: 40,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                InkWell(
+                  onTap: () {
+                    /* Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Quejas()),
+                           );*/
+
+                    showDialog(
+                      context: context,
+                      builder: (BuildContext context) {
+
+                        return Center(
+                          child:  AlertDialog(
+                            title: Text("Adicional 1"),
+                            content:  TextField(
+                              maxLength: 120,
+                              maxLines: 5,
+                              decoration: InputDecoration(
+                                  border: OutlineInputBorder(),
+                                  hintText: 'Ingresa tu sugerencia'
+                              ),
+                            ),
+                            actions: <Widget>[
+                              FlatButton(
+                                child:  Text("Envíar"),
+                                onPressed: () {
+                                  /*Navigator.push(
+                                     context,
+                                     MaterialPageRoute(builder: (context) => LoginPage()),
+                                 );
+                         Navigator.pushNamedAndRemoveUntil(context, '/', (_) => false);*/
+                                  Navigator.of(context).pop();
+                                },
+                              ),
+
+                              FlatButton(
+                                child:  Text("Cancelar"),
+                                onPressed: () {
+                                  Navigator.of(context).pop();
+                                },
+                              ),
+                            ],
+                          ),
+                        );
+
+                      },
+                    );
+                  },
+                  child: Container(
+                    margin: EdgeInsets.only(
+                        top: 5.0,
+                        right: 5.0,
+                        left: 5.0
+                    ),
+                    height: 44.0,
+                    width: 110.0,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20.0),
+                      color: Color(0xFF214575),
+                    ),
+                    child: Center(
+                      child: Text("Adicional 1",
+                          style: TextStyle(
+                              fontFamily: "Sabritas",
+                              fontSize: 16.0,
+                              color: Colors.white
+                          )
+                      ),
+                    ),
+                  ),
+                ),
+                InkWell(
+                  onTap: () {
+                    /* Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => Sugerencias()),
+                              );*/
+                    showDialog(
+                      context: context,
+                      builder: (BuildContext context) {
+
+                        return Center(
+                          child:  AlertDialog(
+                            title: Text("Envia tu sugerencia"),
+                            content:  TextField(
+
+                              maxLength: 120,
+                              maxLines: 5,
+                              decoration: InputDecoration(
+                                  border: OutlineInputBorder(),
+                                  hintText: 'Ingresa tu sugerencia'
+                              ),
+                            ),
+                            actions: <Widget>[
+                              FlatButton(
+                                child:  Text("Envíar"),
+                                onPressed: () {
+                                  /*Navigator.push(
+                                     context,
+                                     MaterialPageRoute(builder: (context) => LoginPage()),
+                                 );
+                         Navigator.pushNamedAndRemoveUntil(context, '/', (_) => false);*/
+                                  Navigator.of(context).pop();
+                                },
+                              ),
+
+                              FlatButton(
+                                child:  Text("Cancelar"),
+                                onPressed: () {
+                                  Navigator.of(context).pop();
+                                },
+                              ),
+                            ],
+                          ),
+                        );
+
+                      },
+                    );
+                  },
+                  child: Container(
+                    margin: EdgeInsets.only(
+                        top: 5.0,
+                        right: 5.0,
+                        left: 5.0,
+                    ),
+                    height: 44.0,
+                    width: 110.0,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20.0),
+                      color: Color(0xFF214575),
+                    ),
+                    child: Center(
+                      child: Text("Adicional 2",
+                          style: TextStyle(
+                              fontFamily: "Sabritas",
+                              fontSize: 16.0,
+                              color: Colors.white
+                          )
+                      ),
+                    ),
+                  ),
+                ),
+
+                //Container(),
+                InkWell(
+                  onTap: () {
+                    /* Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => Sugerencias()),
+                              );*/
+                    showDialog(
+                      context: context,
+                      builder: (BuildContext context) {
+
+                        return Center(
+                          child:  AlertDialog(
+                            title: Text("Envia tu sugerencia"),
+                            content:  TextField(
+
+                              maxLength: 120,
+                              maxLines: 5,
+                              decoration: InputDecoration(
+                                  border: OutlineInputBorder(),
+                                  hintText: 'Ingresa tu sugerencia'
+                              ),
+                            ),
+                            actions: <Widget>[
+                              FlatButton(
+                                child:  Text("Envíar"),
+                                onPressed: () {
+                                  /*Navigator.push(
+                                     context,
+                                     MaterialPageRoute(builder: (context) => LoginPage()),
+                                 );
+                         Navigator.pushNamedAndRemoveUntil(context, '/', (_) => false);*/
+                                  Navigator.of(context).pop();
+                                },
+                              ),
+
+                              FlatButton(
+                                child:  Text("Cancelar"),
+                                onPressed: () {
+                                  Navigator.of(context).pop();
+                                },
+                              ),
+                            ],
+                          ),
+                        );
+
+                      },
+                    );
+                  },
+                  child: Container(
+                    margin: EdgeInsets.only(
+                        top: 5.0,
+                        right: 5.0,
+                        left: 5.0,
+                    ),
+                    height: 44.0,
+                    width: 110.0,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20.0),
+                      color: Color(0xFF214575),
+                    ),
+                    child: Center(
+                      child: Text("Adicional 3",
+                          style: TextStyle(
+                              fontFamily: "Sabritas",
+                              fontSize: 16.0,
+                              color: Colors.white
+                          )
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            Container(
+              child: Column(
+                children: <Widget>[
+                  Text("Facturas pendientes",
+                    style: TextStyle(
+                      color: Colors.black54,
+                      fontSize: 18.0,
+                      fontFamily: "Sabritas",
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.only(top:15.0),
+                    child: SizedBox(
+                      height: 200,
+                      width: 300,
+                      child: ListView(
+                        children:  [
+                          Divider(
+                            height: 2.0,
+                          ),
+                          ListTile(
+
+                            title: Text('Servicio 1'),
+                            subtitle: Text("Factura 1"
+                            ),
+                            trailing: Icon(
+                              Icons.file_download,
+                              size: 28.0,
+                            ),
+                          ),
+                          Divider(
+                            height: 2.0,
+                          ),
+                          ListTile(
+
+                            title: Text('Servicio 2'),
+                            subtitle: Text("Factura 2"
+                            ),
+                            trailing: Icon(
+                              Icons.file_download,
+                              size: 28.0,
+                            ),
+                          ),
+                          Divider(
+                            height: 2.0,
+                          ),
+                          ListTile(
+
+                            title: Text('Servicio 1'),
+                            subtitle: Text("Factura 1"
+                            ),
+                            trailing: Icon(
+                              Icons.file_download,
+                              size: 28.0,
+                            ),
+                          ),
+                          Divider(
+                            height: 2.0,
+                          ),  ListTile(
+
+                            title: Text('Servicio 1'),
+                            subtitle: Text("Factura 1"
+                            ),
+                            trailing: Icon(
+                              Icons.file_download,
+                              size: 28.0,
+                            ),
+                          ),
+                          Divider(
+                            height: 2.0,
+                          ),  ListTile(
+
+                            title: Text('Servicio 1'),
+                            subtitle: Text("Factura 1"
+                            ),
+                            trailing: Icon(
+                              Icons.file_download,
+                              size: 28.0,
+                            ),
+                          ),
+                          Divider(
+                            height: 2.0,
+                          ),  ListTile(
+
+                            title: Text('Servicio 1'),
+                            subtitle: Text("Factura 1"
+                            ),
+                            trailing: Icon(
+                              Icons.file_download,
+                              size: 28.0,
+                            ),
+                          ),
+                          Divider(
+                            height: 2.0,
+                          ),  ListTile(
+
+                            title: Text('Servicio 1'),
+                            subtitle: Text("Factura 1"
+                            ),
+                            trailing: Icon(
+                              Icons.file_download,
+                              size: 28.0,
+                            ),
+                          ),
+                          Divider(
+                            height: 2.0,
+                          ),
+
+                        ],
+                      ),
+                    ),
+
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(height: 5)
+          ],
+        ),),
+
       ),
     );
   }

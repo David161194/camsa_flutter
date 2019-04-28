@@ -6,20 +6,19 @@
                 {
                     "source": "C:\\Users\\alons\\OneDrive\\Escritorio\\camsa_flutter\\android\\app\\src\\main\\res\\values\\styles.xml",
                     "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "57",
-                        "endLines": "7",
-                        "endColumns": "12",
-                        "endOffsets": "355"
+                        "startLines": "6,-1",
+                        "startColumns": "4,-1",
+                        "startOffsets": "291,-1",
+                        "endColumns": "38,-1",
+                        "endOffsets": "325,-1"
                     },
                     "to": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endLines": "7",
-                        "endColumns": "12",
-                        "endOffsets": "348"
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,94",
+                        "endLines": "2,6",
+                        "endColumns": "38,12",
+                        "endOffsets": "89,319"
                     }
                 }
             ]
