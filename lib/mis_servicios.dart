@@ -324,6 +324,7 @@
   }
 }*/
 
+import 'package:flutter/cupertino.dart';
 import "package:flutter/material.dart";
 
 
@@ -508,6 +509,7 @@ class _DropDownButtonState extends State<Mis_servicios> {
               height: 40,
             ),
             Container(
+
               padding: EdgeInsets.symmetric(horizontal: 50),
               color: Color(0xFF1D539B),
               child: _itemDown(),
@@ -532,47 +534,6 @@ class _DropDownButtonState extends State<Mis_servicios> {
                           context,
                           MaterialPageRoute(builder: (context) => Quejas()),
                            );*/
-
-                    showDialog(
-                      context: context,
-                      builder: (BuildContext context) {
-
-                        return Center(
-                          child:  AlertDialog(
-                            title: Text("Adicional 1"),
-                            content:  TextField(
-                              maxLength: 120,
-                              maxLines: 5,
-                              decoration: InputDecoration(
-                                  border: OutlineInputBorder(),
-                                  hintText: 'Ingresa tu sugerencia'
-                              ),
-                            ),
-                            actions: <Widget>[
-                              FlatButton(
-                                child:  Text("Envíar"),
-                                onPressed: () {
-                                  /*Navigator.push(
-                                     context,
-                                     MaterialPageRoute(builder: (context) => LoginPage()),
-                                 );
-                         Navigator.pushNamedAndRemoveUntil(context, '/', (_) => false);*/
-                                  Navigator.of(context).pop();
-                                },
-                              ),
-
-                              FlatButton(
-                                child:  Text("Cancelar"),
-                                onPressed: () {
-                                  Navigator.of(context).pop();
-                                },
-                              ),
-                            ],
-                          ),
-                        );
-
-                      },
-                    );
                   },
                   child: Container(
                     margin: EdgeInsets.only(
@@ -603,47 +564,6 @@ class _DropDownButtonState extends State<Mis_servicios> {
                                 context,
                                 MaterialPageRoute(builder: (context) => Sugerencias()),
                               );*/
-                    showDialog(
-                      context: context,
-                      builder: (BuildContext context) {
-
-                        return Center(
-                          child:  AlertDialog(
-                            title: Text("Envia tu sugerencia"),
-                            content:  TextField(
-
-                              maxLength: 120,
-                              maxLines: 5,
-                              decoration: InputDecoration(
-                                  border: OutlineInputBorder(),
-                                  hintText: 'Ingresa tu sugerencia'
-                              ),
-                            ),
-                            actions: <Widget>[
-                              FlatButton(
-                                child:  Text("Envíar"),
-                                onPressed: () {
-                                  /*Navigator.push(
-                                     context,
-                                     MaterialPageRoute(builder: (context) => LoginPage()),
-                                 );
-                         Navigator.pushNamedAndRemoveUntil(context, '/', (_) => false);*/
-                                  Navigator.of(context).pop();
-                                },
-                              ),
-
-                              FlatButton(
-                                child:  Text("Cancelar"),
-                                onPressed: () {
-                                  Navigator.of(context).pop();
-                                },
-                              ),
-                            ],
-                          ),
-                        );
-
-                      },
-                    );
                   },
                   child: Container(
                     margin: EdgeInsets.only(
@@ -676,47 +596,6 @@ class _DropDownButtonState extends State<Mis_servicios> {
                                 context,
                                 MaterialPageRoute(builder: (context) => Sugerencias()),
                               );*/
-                    showDialog(
-                      context: context,
-                      builder: (BuildContext context) {
-
-                        return Center(
-                          child:  AlertDialog(
-                            title: Text("Envia tu sugerencia"),
-                            content:  TextField(
-
-                              maxLength: 120,
-                              maxLines: 5,
-                              decoration: InputDecoration(
-                                  border: OutlineInputBorder(),
-                                  hintText: 'Ingresa tu sugerencia'
-                              ),
-                            ),
-                            actions: <Widget>[
-                              FlatButton(
-                                child:  Text("Envíar"),
-                                onPressed: () {
-                                  /*Navigator.push(
-                                     context,
-                                     MaterialPageRoute(builder: (context) => LoginPage()),
-                                 );
-                         Navigator.pushNamedAndRemoveUntil(context, '/', (_) => false);*/
-                                  Navigator.of(context).pop();
-                                },
-                              ),
-
-                              FlatButton(
-                                child:  Text("Cancelar"),
-                                onPressed: () {
-                                  Navigator.of(context).pop();
-                                },
-                              ),
-                            ],
-                          ),
-                        );
-
-                      },
-                    );
                   },
                   child: Container(
                     margin: EdgeInsets.only(
@@ -744,6 +623,7 @@ class _DropDownButtonState extends State<Mis_servicios> {
               ],
             ),
             Container(
+              padding: EdgeInsets.only(top:5.0) ,
               child: Column(
                 children: <Widget>[
                   Text("Facturas pendientes",

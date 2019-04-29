@@ -45,11 +45,13 @@ class SecondScreen extends StatelessWidget {
             accountName: Text('Antonio'),
             accountEmail: Text('alonso1611@hotmail.com'),
             currentAccountPicture:
-            Image(
-                width: 500.0,
-                height: 300.0,
-                fit: BoxFit.fill,
-                image: AssetImage('assets/img/Logo2.png')),
+                Container(
+                  height: 70,
+                  width: 70,
+                  child:Image(
+                    fit: BoxFit.contain,
+                    image: AssetImage('assets/img/Logoof.png')),),
+
             decoration: BoxDecoration(color: Color(0xFF1D539B)),
           ),
           ListTile(

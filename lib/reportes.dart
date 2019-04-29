@@ -16,6 +16,15 @@ class Reportes extends StatelessWidget{
             ),
           ),
           centerTitle: true,
+           leading: IconButton(
+              icon: Icon(
+                Icons.arrow_back
+              ),
+             onPressed: () =>{
+                Navigator.of(context).pop(),
+             },
+
+           ),
            backgroundColor: Color(0xFF1D539B),
         ),
         endDrawer: Drawer(
@@ -103,8 +112,11 @@ para concluir con la solicitud. Muchas gracias."""),
                                 FlatButton(
                                   child:  Text("Aceptar"),
                                   onPressed: () {
-                                   Navigator.pushNamedAndRemoveUntil(context, '/mante', (_) => false);
-                                    //Navigator.popUntil(context, ModalRoute.withName('/mante'));
+                                   //Navigator.pushNamedAndRemoveUntil(context, '/mante', (_) => false);
+                                   // Navigator.popUntil(context, ModalRoute.withName('/mante'));
+                                   // Navigator.of(context).pushReplacementNamed('/mante');
+                                    //Navigator.popAndPushNamed(context, '/mante');
+                                    Navigator.of(context).pushNamedAndRemoveUntil('/mante', ModalRoute.withName('/second'));
                                   },
                                 ),
 

@@ -1,4 +1,4 @@
-#Sat Apr 27 23:47:22 CDT 2019
+#Sun Apr 28 19:30:21 CDT 2019
 base.0=C\:\\Users\\alons\\OneDrive\\Escritorio\\camsa_flutter\\build\\app\\intermediates\\transforms\\dexMerger\\debug\\0
 path.0=classes.dex
 renamed.0=classes.dex

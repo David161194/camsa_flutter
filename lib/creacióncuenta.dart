@@ -62,7 +62,7 @@ class CreacionCuenta extends StatelessWidget{
                                      context,
                                      MaterialPageRoute(builder: (context) => LoginPage()),
                                  );*/
-                                 Navigator.pushNamedAndRemoveUntil(context, '/mante', (_) => false);
+                                 Navigator.pushNamedAndRemoveUntil(context, '/', (_) => false);
                                },
                              ),
 
