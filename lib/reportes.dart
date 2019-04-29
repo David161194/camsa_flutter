@@ -1,3 +1,4 @@
+import 'package:camsa_login/configuracion.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -8,7 +9,7 @@ class Reportes extends StatelessWidget{
     return  MaterialApp(
       home:  Scaffold(
         appBar: AppBar(
-          title: Text("Reporte de problemas",
+          title: Text("Guía de Soluciones",
             style: TextStyle(
               color: Colors.white,
               fontSize: 18.0,
@@ -37,18 +38,22 @@ class Reportes extends StatelessWidget{
                 accountName: Text('Antonio'),
                 accountEmail: Text('alonso1611@hotmail.com'),
                 currentAccountPicture:
-                Image(
-                    width: 500.0,
-                    height: 300.0,
-                    fit: BoxFit.fill,
-                    image: AssetImage('assets/img/Logo2.png')),
+                Container(
+                  height: 70,
+                  width: 70,
+                  child:Image(
+                      fit: BoxFit.contain,
+                      image: AssetImage('assets/img/Logoof.png')),),
                 decoration: BoxDecoration(color: Color(0xFF1D539B)),
               ),
               ListTile(
                 leading: Icon(Icons.account_circle),
                 title: Text('Configuración'),
                 onTap: () {
-                  Navigator.pop(context);
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Configuracion()),
+                  );
                 },
               ),
               Divider(
@@ -123,7 +128,7 @@ para concluir con la solicitud. Muchas gracias."""),
                                 FlatButton(
                                   child:  Text("Cancelar"),
                                   onPressed: () {
-                                    Navigator.of(context).pop();
+                                    Navigator.of(context).pushNamedAndRemoveUntil('/mante', ModalRoute.withName('/second'));
                                   },
                                 ),
                               ],

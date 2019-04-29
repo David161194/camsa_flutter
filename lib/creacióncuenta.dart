@@ -24,7 +24,7 @@ class CreacionCuenta extends StatelessWidget{
           ),
         ),
         Container (
-          padding: EdgeInsets.only(top: 50.0),
+          padding: EdgeInsets.only(top: 150.0),
           child:
           Text("""Tu contraseña será enviada a este correo: alon*****************
           
@@ -33,8 +33,7 @@ class CreacionCuenta extends StatelessWidget{
             textAlign: TextAlign.center,
             style: TextStyle(
               color: Colors.white,
-              fontSize: 16.0,
-              fontStyle: FontStyle.italic,
+              fontSize: 18.0,
               fontFamily: "WorkSansSemiBold"
             ),
 
@@ -42,12 +41,132 @@ class CreacionCuenta extends StatelessWidget{
         ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-
                 children: <Widget>[
-               Flexible(
-                 child: RaisedButton(
-                   onPressed: () {
-                     showDialog(
+                  InkWell(
+                    onTap: () {
+                      /* Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Quejas()),
+                           );*/
+                      showDialog(
+                        context: context,
+                        builder: (BuildContext context) {
+
+                          return AlertDialog(
+                            title: Text("Mensaje"),
+                            content:  Text("Tu contraseña será enviada a tu correo"),
+                            actions: <Widget>[
+                              FlatButton(
+                                child:  Text("Aceptar"),
+                                onPressed: () {
+                                  /*Navigator.push(
+                                     context,
+                                     MaterialPageRoute(builder: (context) => LoginPage()),
+                                 );*/
+                                  Navigator.pushNamedAndRemoveUntil(context, '/', (_) => false);
+                                },
+                              ),
+
+                              FlatButton(
+                                child:  Text("Cancelar"),
+                                onPressed: () {
+                                  Navigator.of(context).pop();
+                                },
+                              ),
+                            ],
+                          );
+                        },
+                      );
+
+                    },
+                    child: Container(
+                      margin: EdgeInsets.only(
+                          top: 20.0,
+                          right: 20.0,
+                          left: 20.0
+                      ),
+                      height: 44.0,
+                      width: 120.0,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20.0),
+                        color: Color(0xFF214575),
+                      ),
+                      child: Center(
+                        child: Text("Si",
+                            style: TextStyle(
+                                fontFamily: "Sabritas",
+                                fontSize: 16.0,
+                                color: Colors.white
+                            )
+                        ),
+                      ),
+                    ),
+                  ),
+                  //Container(),
+                  InkWell(
+                    onTap: () {
+                      /* Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => Sugerencias()),
+                              );*/
+                      showDialog(
+                        context: context,
+                        builder: (BuildContext context) {
+
+                          return AlertDialog(
+                            title: Text("Mensaje"),
+                            content:  Text("""Comunicate con soporte al siguiente correo: 
+                           
+                           soporte@camsa.com"""),
+                            actions: <Widget>[
+                              FlatButton(
+                                  child:  Text("Aceptar"),
+                                  onPressed: () {
+                                    Navigator.pushNamedAndRemoveUntil(context, '/', (_) => false);
+                                  }
+                              ),
+                            ],
+                          );
+                        },
+                      );
+                    },
+                    child: Container(
+                      margin: EdgeInsets.only(
+                          top: 20.0,
+                          right: 20.0,
+                          left: 20.0
+                      ),
+                      height: 44.0,
+                      width: 120.0,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20.0),
+                        color: Color(0xFF214575),
+                      ),
+                      child: Center(
+                        child: Text("No",
+                            style: TextStyle(
+                                fontFamily: "Sabritas",
+                                fontSize: 16.0,
+                                color: Colors.white
+                            )
+                        ),
+                      ),
+                    ),
+                  ),
+
+                ],
+              ),
+
+
+            ],
+        ),
+      ),
+    );
+  }
+
+
+}
+/*showDialog(
                        context: context,
                        builder: (BuildContext context) {
 
@@ -75,29 +194,15 @@ class CreacionCuenta extends StatelessWidget{
                            ],
                          );
                        },
-                     );
-                   },
-                   padding: const EdgeInsets.symmetric(vertical: 15.0),
-                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(30.0))),
-                   child: const Text('Si'),
-                 ),
-               ),
-               Flexible(
-                 child: Container(
-                   //padding: EdgeInsets.symmetric(horizontal: 10.0),
-                 ),
-               ),
-               Flexible(
-                 child:  RaisedButton(
-                   onPressed: () {
-                     showDialog(
+                     );*/
+/*showDialog(
                        context: context,
                        builder: (BuildContext context) {
 
                          return AlertDialog(
                            title: Text("Mensaje"),
-                           content:  Text("""Comunicate con soporte al siguiente correo: 
-                           
+                           content:  Text("""Comunicate con soporte al siguiente correo:
+
                            soporte@camsa.com"""),
                            actions: <Widget>[
                              FlatButton(
@@ -109,24 +214,4 @@ class CreacionCuenta extends StatelessWidget{
                            ],
                          );
                        },
-                     );
-                     },
-                   padding: const EdgeInsets.symmetric(vertical: 15.0),
-
-                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(30.0))),
-                   child: const Text('No'),
-                 ),
-               ),
-              ],
-
-              ),
-
-
-            ],
-        ),
-      ),
-    );
-  }
-
-
-}
+                     );*/

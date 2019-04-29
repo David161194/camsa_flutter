@@ -324,6 +324,8 @@
   }
 }*/
 
+import 'package:camsa_login/configuracion.dart';
+import 'package:camsa_login/style/theme.dart' as prefix0;
 import 'package:flutter/cupertino.dart';
 import "package:flutter/material.dart";
 
@@ -381,69 +383,17 @@ class _DropDownButtonState extends State<Mis_servicios> {
     elevation: 2,
 
   style: TextStyle(
-    color: Colors.amberAccent,
+    color: Colors.black54,
     fontSize: 18.0,
     fontFamily: "Sabritas",
   ),
-  );
-  DropdownButton _itemDown2() => DropdownButton<String>(
-    items: [
-
-      DropdownMenuItem(
-        value: "1",
-        child: Row(
-
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: <Widget>[
-            Icon(Icons.account_circle,
-              color: Colors.white,
-            ),
-            SizedBox(width: 10),
-            Text(
-              "Monitoreo",
-            ),
-          ],
-        ),
-      ),
-
-      DropdownMenuItem(
-        value: "2",
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: <Widget>[
-            Icon(Icons.account_circle,
-              color: Colors.white,
-            ),
-
-            SizedBox(width: 10),
-            Text(
-              "Monitoreo 1",
-            ),
-          ],
-        ),
-      ),
-    ],
-    onChanged: (value) {
-      setState(() {
-        _value = value;
-      });
-    },
-
-    value: _value,
-    elevation: 2,
-
-    style: TextStyle(
-      color: Colors.amberAccent,
-      fontSize: 18.0,
-      fontFamily: "Sabritas",
-    ),
   );
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Mis servicios",
+        title: Text("Mi Cuenta",
           style: TextStyle(
             color: Colors.white,
             fontSize: 18.0,
@@ -463,18 +413,22 @@ class _DropDownButtonState extends State<Mis_servicios> {
               accountName: Text('Antonio'),
               accountEmail: Text('alonso1611@hotmail.com'),
               currentAccountPicture:
-              Image(
-                  width: 500.0,
-                  height: 300.0,
-                  fit: BoxFit.fill,
-                  image: AssetImage('assets/img/Logo2.png')),
+              Container(
+                height: 70,
+                width: 70,
+                child:Image(
+                    fit: BoxFit.contain,
+                    image: AssetImage('assets/img/Logoof.png')),),
               decoration: BoxDecoration(color: Color(0xFF1D539B)),
             ),
             ListTile(
               leading: Icon(Icons.account_circle),
               title: Text('Configuración'),
               onTap: () {
-                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Configuracion()),
+                );
               },
             ),
             Divider(
@@ -506,127 +460,206 @@ class _DropDownButtonState extends State<Mis_servicios> {
           child: Column(
           children: <Widget>[
             Container(
-              height: 40,
+              height: 25,
             ),
-            Container(
 
-              padding: EdgeInsets.symmetric(horizontal: 50),
-              color: Color(0xFF1D539B),
-              child: _itemDown(),
+            Container (
+
+              child: Row(
+                children: <Widget>[
+                  Container(
+                   padding: EdgeInsets.symmetric(horizontal: 40),
+                      child: Text("Mis cuentas:",
+                        style: TextStyle(
+                          color: Colors.black54,
+                          fontSize: 18.0,
+                          fontFamily: "Sabritas",
+                        ),
+
+                      ),
+                    ),
+                 Container(
+                      padding: EdgeInsets.symmetric(horizontal: 10),
+                      color: Color(0xFF1D539B),
+                      child: _itemDown(),
+                    ),
+
+
+                ],
+              ),
+            ),
+
+            Container(
+              height: 25,
             ),
             Container(
-              height: 40,
+              padding: EdgeInsets.symmetric(horizontal: 40),
+              child: Text("Monitoreo",
+                style: TextStyle(
+                  color: Colors.black54,
+                  fontSize: 18.0,
+                  fontFamily: "Sabritas",
+                ),
+
+              ),
             ),
+            Card(
+              elevation: 2.0,
+              color: Colors.white,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(8.0),
+              ),
+              child: Container(
+                width: 300.0,
+                height: 60.0,
+                child: Column(
+                  children: <Widget>[
+                    Padding(
+                      padding: EdgeInsets.only(
+                          top: 20.0, bottom: 20.0, left: 25.0, right: 25.0),
+                      child: Text("Periodo             2 - 02/2019",
+                        style: TextStyle(
+                            fontFamily: "Sabritas",
+                            fontSize: 14.0,
+                            color: Colors.black),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+
             Container(
-              padding: EdgeInsets.symmetric(horizontal: 36),
-              color: Color(0xFF1D539B),
-              child: _itemDown2(),
-            ),
-            Container(
-              height: 40,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                InkWell(
-                  onTap: () {
-                    /* Navigator.push(
+              padding: EdgeInsets.symmetric(vertical: 10.0),
+             child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+
+                  InkWell(
+
+                    onTap: () {
+                      /* Navigator.push(
                           context,
                           MaterialPageRoute(builder: (context) => Quejas()),
                            );*/
-                  },
-                  child: Container(
-                    margin: EdgeInsets.only(
-                        top: 5.0,
-                        right: 5.0,
-                        left: 5.0
-                    ),
-                    height: 44.0,
-                    width: 110.0,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20.0),
-                      color: Color(0xFF214575),
-                    ),
-                    child: Center(
-                      child: Text("Adicional 1",
-                          style: TextStyle(
-                              fontFamily: "Sabritas",
-                              fontSize: 16.0,
-                              color: Colors.white
-                          )
-                      ),
-                    ),
-                  ),
-                ),
-                InkWell(
-                  onTap: () {
-                    /* Navigator.push(
-                                context,
-                                MaterialPageRoute(builder: (context) => Sugerencias()),
-                              );*/
-                  },
-                  child: Container(
-                    margin: EdgeInsets.only(
-                        top: 5.0,
-                        right: 5.0,
-                        left: 5.0,
-                    ),
-                    height: 44.0,
-                    width: 110.0,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20.0),
-                      color: Color(0xFF214575),
-                    ),
-                    child: Center(
-                      child: Text("Adicional 2",
-                          style: TextStyle(
-                              fontFamily: "Sabritas",
-                              fontSize: 16.0,
-                              color: Colors.white
-                          )
-                      ),
-                    ),
-                  ),
-                ),
+                    },
+                    child: Container(
+                      margin: EdgeInsets.only(
+                          top: 5.0,
 
-                //Container(),
-                InkWell(
-                  onTap: () {
-                    /* Navigator.push(
-                                context,
-                                MaterialPageRoute(builder: (context) => Sugerencias()),
-                              );*/
-                  },
-                  child: Container(
-                    margin: EdgeInsets.only(
-                        top: 5.0,
-                        right: 5.0,
-                        left: 5.0,
-                    ),
-                    height: 44.0,
-                    width: 110.0,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20.0),
-                      color: Color(0xFF214575),
-                    ),
-                    child: Center(
-                      child: Text("Adicional 3",
-                          style: TextStyle(
-                              fontFamily: "Sabritas",
-                              fontSize: 16.0,
-                              color: Colors.white
-                          )
+                      ),
+                      height: 44.0,
+                      width: 90.0,
+                      decoration: BoxDecoration(
+                        color: Color(0xFF214575),
+                      ),
+                      child: Center(
+                        child: Text("Servicios",
+                            style: TextStyle(
+                                fontFamily: "Sabritas",
+                                fontSize: 14.0,
+                                color: Colors.white
+                            )
+                        ),
                       ),
                     ),
                   ),
-                ),
-              ],
+                  InkWell(
+                    onTap: () {
+                      /* Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => Sugerencias()),
+                              );*/
+                    },
+                    child: Container(
+                      margin: EdgeInsets.only(
+                        top: 5.0,
+
+
+                      ),
+                      height: 44.0,
+                      width: 110.0,
+                      decoration: BoxDecoration(
+                        color: Color(0xFF1D539B),
+                      ),
+                      child: Center(
+                        child: Text("Mantenimientos",
+                            style: TextStyle(
+                                fontFamily: "Sabritas",
+                                fontSize: 14.0,
+                                color: Colors.white
+                            )
+                        ),
+                      ),
+                    ),
+                  ),
+                  //Container(),
+                  InkWell(
+                    onTap: () {
+                      /* Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => Sugerencias()),
+                              );*/
+                    },
+                    child: Container(
+                      margin: EdgeInsets.only(
+                        top: 5.0,
+
+                      ),
+                      height: 44.0,
+                      width: 97.0,
+                      decoration: BoxDecoration(
+                        color: Color(0xFF214575),
+                      ),
+                      child: Center(
+                        child: Text("Instalaciones",
+                            style: TextStyle(
+                                fontFamily: "Sabritas",
+                                fontSize: 14.0,
+                                color: Colors.white
+                            )
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
+
+            Container(
+             // padding: EdgeInsets.symmetric(vertical:3.0) ,
+             child: Card(
+                elevation: 2.0,
+                color: Colors.white,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8.0),
+                ),
+                child: Container(
+                  width: 300.0,
+                  height: 110.0,
+                  child: Column(
+                    children: <Widget>[
+                      Padding(
+                        padding: EdgeInsets.only(
+                            top: 20.0, bottom: 20.0, left: 25.0, right: 25.0),
+                        child: Text("",
+                          style: TextStyle(
+                              fontFamily: "Sabritas",
+                              fontSize: 14.0,
+                              color: Colors.black),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+
             Container(
               padding: EdgeInsets.only(top:5.0) ,
               child: Column(
                 children: <Widget>[
-                  Text("Facturas pendientes",
+                  Text("Mis facturas",
                     style: TextStyle(
                       color: Colors.black54,
                       fontSize: 18.0,
@@ -636,7 +669,7 @@ class _DropDownButtonState extends State<Mis_servicios> {
                   Container(
                     padding: EdgeInsets.only(top:15.0),
                     child: SizedBox(
-                      height: 200,
+                      height: 130,
                       width: 300,
                       child: ListView(
                         children:  [
@@ -645,8 +678,8 @@ class _DropDownButtonState extends State<Mis_servicios> {
                           ),
                           ListTile(
 
-                            title: Text('Servicio 1'),
-                            subtitle: Text("Factura 1"
+                            title: Text('Mantenimiento 2 - 02/2019'),
+                            subtitle: Text("29/04/2019"
                             ),
                             trailing: Icon(
                               Icons.file_download,
@@ -658,8 +691,8 @@ class _DropDownButtonState extends State<Mis_servicios> {
                           ),
                           ListTile(
 
-                            title: Text('Servicio 2'),
-                            subtitle: Text("Factura 2"
+                            title: Text('Instalación 2 - 02/2019'),
+                            subtitle: Text("29/04/2019"
                             ),
                             trailing: Icon(
                               Icons.file_download,
@@ -671,56 +704,8 @@ class _DropDownButtonState extends State<Mis_servicios> {
                           ),
                           ListTile(
 
-                            title: Text('Servicio 1'),
-                            subtitle: Text("Factura 1"
-                            ),
-                            trailing: Icon(
-                              Icons.file_download,
-                              size: 28.0,
-                            ),
-                          ),
-                          Divider(
-                            height: 2.0,
-                          ),  ListTile(
-
-                            title: Text('Servicio 1'),
-                            subtitle: Text("Factura 1"
-                            ),
-                            trailing: Icon(
-                              Icons.file_download,
-                              size: 28.0,
-                            ),
-                          ),
-                          Divider(
-                            height: 2.0,
-                          ),  ListTile(
-
-                            title: Text('Servicio 1'),
-                            subtitle: Text("Factura 1"
-                            ),
-                            trailing: Icon(
-                              Icons.file_download,
-                              size: 28.0,
-                            ),
-                          ),
-                          Divider(
-                            height: 2.0,
-                          ),  ListTile(
-
-                            title: Text('Servicio 1'),
-                            subtitle: Text("Factura 1"
-                            ),
-                            trailing: Icon(
-                              Icons.file_download,
-                              size: 28.0,
-                            ),
-                          ),
-                          Divider(
-                            height: 2.0,
-                          ),  ListTile(
-
-                            title: Text('Servicio 1'),
-                            subtitle: Text("Factura 1"
+                            title: Text('Servicio 2 - 02/2019'),
+                            subtitle: Text("29/04/2019"
                             ),
                             trailing: Icon(
                               Icons.file_download,
@@ -730,9 +715,9 @@ class _DropDownButtonState extends State<Mis_servicios> {
                           Divider(
                             height: 2.0,
                           ),
-
                         ],
                       ),
+
                     ),
 
                   ),

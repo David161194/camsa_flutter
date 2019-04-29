@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\alons\\OneDrive\\Escritorio\\camsa_flutter\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+            "outputFile": "C:\\Users\\ajsanchez\\Desktop\\camsa_flutter\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\alons\\OneDrive\\Escritorio\\camsa_flutter\\android\\app\\src\\main\\res\\values\\styles.xml",
+                    "source": "C:\\Users\\ajsanchez\\Desktop\\camsa_flutter\\android\\app\\src\\main\\res\\values\\styles.xml",
                     "from": {
                         "startLines": "6,2",
                         "startColumns": "4,4",

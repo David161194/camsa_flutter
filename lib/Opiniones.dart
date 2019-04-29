@@ -1,4 +1,5 @@
 
+import 'package:camsa_login/configuracion.dart';
 import 'package:camsa_login/quejas.dart';
 import 'package:camsa_login/sugerencias.dart';
 import 'package:camsa_login/utils/thirdscreen.dart';
@@ -52,7 +53,7 @@ class _LoginPageState extends State<Opiniones>{
     return Scaffold(
 
       appBar: AppBar(
-        title: Text("Opiniones",
+        title: Text("Mi Experiencia",
           style: TextStyle(
             color: Colors.white,
             fontSize: 18.0,
@@ -71,18 +72,22 @@ class _LoginPageState extends State<Opiniones>{
               accountName: Text('Antonio'),
               accountEmail: Text('alonso1611@hotmail.com'),
               currentAccountPicture:
-              Image(
-                  width: 500.0,
-                  height: 300.0,
-                  fit: BoxFit.fill,
-                  image: AssetImage('assets/img/Logo2.png')),
+              Container(
+                height: 70,
+                width: 70,
+                child:Image(
+                    fit: BoxFit.contain,
+                    image: AssetImage('assets/img/Logoof.png')),),
               decoration: BoxDecoration(color: Color(0xFF1D539B)),
             ),
             ListTile(
               leading: Icon(Icons.account_circle),
               title: Text('Configuración'),
               onTap: () {
-                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Configuracion()),
+                );
               },
             ),
             Divider(
@@ -147,13 +152,13 @@ class _LoginPageState extends State<Opiniones>{
 
                        return Center(
                          child:  AlertDialog(
-                           title: Text("Envia tu queja"),
+                           title: Text("Envia tu insatisfacción"),
                          content:  TextField(
                           maxLength: 120,
                          maxLines: 5,
                          decoration: InputDecoration(
                              border: OutlineInputBorder(),
-                             hintText: 'Ingresa tu sugerencia'
+                             hintText: 'Ingresa tu insatisfacción'
                          ),
                          ),
                          actions: <Widget>[
@@ -195,7 +200,7 @@ class _LoginPageState extends State<Opiniones>{
                               color: Color(0xFF214575),
                             ),
                             child: Center(
-                              child: Text("Enviar queja",
+                              child: Text("Insatisfacción",
                                   style: TextStyle(
                                     fontFamily: "Sabritas",
                                     fontSize: 16.0,
@@ -267,7 +272,7 @@ class _LoginPageState extends State<Opiniones>{
                                 color: Color(0xFF214575),
                               ),
                               child: Center(
-                                child: Text("Enviar sugerencia",
+                                child: Text("Sugerencia",
                                     style: TextStyle(
                                         fontFamily: "Sabritas",
                                         fontSize: 16.0,
@@ -441,7 +446,7 @@ class _LoginPageState extends State<Opiniones>{
                 highlightColor: Colors.transparent,
                 onPressed: _onSignInButtonPress,
                 child: Text(
-                  "Quejas",
+                  "Insatisfacciones",
                   style: TextStyle(
                       color: left,
                       fontSize: 16.0,
@@ -490,7 +495,7 @@ class _LoginPageState extends State<Opiniones>{
                   Padding(
                     padding: EdgeInsets.only(
                         top: 20.0, bottom: 20.0, left: 25.0, right: 25.0),
-                    child: Text("""Mis quejas: Por medio de la presente, le hago de conocimiento 
+                    child: Text("""Mis insatisfacciones: Por medio de la presente, le hago de conocimiento 
 mi inconformidad con el servicio de entrega y paquetería pues los aparatos que he adquirido en 
 su tienda han llegado dañados.""",
                       style: TextStyle(

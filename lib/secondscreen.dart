@@ -1,4 +1,5 @@
 import 'package:camsa_login/Opiniones.dart';
+import 'package:camsa_login/configuracion.dart';
 import 'package:camsa_login/contratacion.dart';
 import 'package:camsa_login/mis_servicios.dart';
 import 'package:camsa_login/reportes.dart';
@@ -58,7 +59,10 @@ class SecondScreen extends StatelessWidget {
             leading: Icon(Icons.account_circle),
             title: Text('Configuración'),
             onTap: () {
-              Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Configuracion()),
+              );
             },
           ),
           Divider(
@@ -129,7 +133,7 @@ class SecondScreen extends StatelessWidget {
                          Expanded(
                            flex: 2,
                             child: Text(
-                              "Opiniones",
+                              "Mi Experiencia",
                               style: TextStyle(
                                 color: Colors.black,
                                 fontSize: 18.0,
@@ -185,7 +189,7 @@ class SecondScreen extends StatelessWidget {
                         Expanded(
                           flex: 2,
                           child: Text(
-                            "Reporte de problemas",
+                            "Guía de Soluciones",
                             style: TextStyle(
                               color: Colors.black,
                               fontSize: 18.0,
@@ -307,7 +311,7 @@ class SecondScreen extends StatelessWidget {
                         Expanded(
                           flex: 2,
                           child: Text(
-                            "Mis servicios",
+                            "Mi Cuenta",
                             style: TextStyle(
                               color: Colors.black,
                               fontSize: 18.0,

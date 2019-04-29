@@ -1,10 +1,71 @@
+import 'package:camsa_login/configuracion.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:carousel_slider/carousel_slider.dart';
+
+final List<String> imgList = [
+  'assets/img/volante_e-02.png',
+  'assets/img/volante_e-02.png',
+  'assets/img/volante_e-02.png',
+];
+final List child = map<Widget>(
+  imgList,
+      (index, i) {
+    return Container(
+
+      margin: EdgeInsets.all(5.0),
+      child: ClipRRect(
+        borderRadius: BorderRadius.all(Radius.circular(5.0)),
+        child: Stack(children: <Widget>[
+          Image.asset('assets/img/volante_e-02.png',
+
+            fit: BoxFit.fill,
+            width: 1000,
+
+          ),
+          Positioned(
+            bottom: 0.0,
+            left: 0.0,
+            right: 0.0,
+            child: Container(
+
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [Color.fromARGB(200, 0, 0, 0), Color.fromARGB(0, 0, 0, 0)],
+                  begin: Alignment.bottomCenter,
+                  end: Alignment.topCenter,
+                ),
+              ),
+              padding: EdgeInsets.symmetric(vertical: 0.0, horizontal: 20.0),
+            ),
+          ),
+        ]),
+      ),
+    );
+  },
+).toList();
+
+List<T> map<T>(List list, Function handler) {
+  List<T> result = [];
+  for (var i = 0; i < list.length; i++) {
+    result.add(handler(i, list[i]));
+  }
+
+  return result;
+}
+
 
 class Contratacion extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
+    final CarouselSlider manualCarouselDemo = CarouselSlider(
+      items: child,
+      autoPlay: false,
+      enlargeCenterPage: true,
+      viewportFraction: 0.9,
+      aspectRatio: 2.0,
+    );
     return Scaffold(
       appBar: AppBar(
         title: Text("Contratación de servicios",
@@ -26,18 +87,22 @@ class Contratacion extends StatelessWidget{
               accountName: Text('Antonio'),
               accountEmail: Text('alonso1611@hotmail.com'),
               currentAccountPicture:
-              Image(
-                  width: 500.0,
-                  height: 300.0,
-                  fit: BoxFit.fill,
-                  image: AssetImage('assets/img/Logo2.png')),
+              Container(
+                height: 70,
+                width: 70,
+                child:Image(
+                    fit: BoxFit.contain,
+                    image: AssetImage('assets/img/Logoof.png')),),
               decoration: BoxDecoration(color: Color(0xFF1D539B)),
             ),
             ListTile(
               leading: Icon(Icons.account_circle),
               title: Text('Configuración'),
               onTap: () {
-                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Configuracion()),
+                );
               },
             ),
             Divider(
@@ -68,16 +133,16 @@ class Contratacion extends StatelessWidget{
         child: Column(
           children: [
             Container(
-              height: 220.0,
+             /* height: 220.0,
                padding: EdgeInsets.only(bottom: 25.0),
                decoration: BoxDecoration(
                  border: Border.all(color: (Colors.amber), width: 2.0) ,
                  image: DecorationImage(
                    image: ExactAssetImage('assets/img/volante_e-02.png'),
                    fit: BoxFit.fitWidth,
-
                  ),
-               ),
+               ),*/
+               child: manualCarouselDemo,
              ),
 
 
