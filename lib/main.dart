@@ -1,6 +1,7 @@
 
 
 import 'package:camsa_login/configuracion.dart';
+import 'package:camsa_login/contratacion.dart';
 import 'package:camsa_login/reportes.dart';
 import 'package:camsa_login/secondscreen.dart';
 import 'package:flutter/material.dart';
@@ -29,6 +30,8 @@ class MyApp extends StatelessWidget {
         '/mante': (context) => Reportes(),
 
         '/confi': (context) => Configuracion(),
+
+        '/contra': (context) => Contratacion(),
 
       },
 

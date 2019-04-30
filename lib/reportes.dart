@@ -1,4 +1,6 @@
 import 'package:camsa_login/configuracion.dart';
+import 'package:camsa_login/secondscreen.dart';
+import 'package:camsa_login/tecnico.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -17,16 +19,16 @@ class Reportes extends StatelessWidget{
             ),
           ),
           centerTitle: true,
-           leading: IconButton(
-              icon: Icon(
+          leading: IconButton(
+            icon: Icon(
                 Icons.arrow_back
-              ),
-             onPressed: () =>{
-                Navigator.of(context).pop(),
-             },
+            ),
+            onPressed: () =>{
+            Navigator.of(context).pop(),
+            },
 
-           ),
-           backgroundColor: Color(0xFF1D539B),
+          ),
+          backgroundColor: Color(0xFF1D539B),
         ),
         endDrawer: Drawer(
           elevation: 10.0,
@@ -100,7 +102,7 @@ class Reportes extends StatelessWidget{
                 return AlertDialog(
                   title: Text("Solicitar técnico"),
                   content:  Text("""¿Desea solicitar los servicios de alguno de nuestros técnicos?
-El costo del servicio es de 400 MXN"""),
+Es posible que se agregue un monto extra por el servicio."""),
                   actions: <Widget>[
                     FlatButton(
                       child:  Text("Aceptar"),
@@ -117,11 +119,20 @@ para concluir con la solicitud. Muchas gracias."""),
                                 FlatButton(
                                   child:  Text("Aceptar"),
                                   onPressed: () {
-                                   //Navigator.pushNamedAndRemoveUntil(context, '/mante', (_) => false);
-                                   // Navigator.popUntil(context, ModalRoute.withName('/mante'));
-                                   // Navigator.of(context).pushReplacementNamed('/mante');
+                                  //  Navigator.pushNamedAndRemoveUntil(context, '/second', (_) => false);
+                                    // Navigator.popUntil(context, ModalRoute.withName('/mante'));
+                                    // Navigator.of(context).pushReplacementNamed('/mante');
                                     //Navigator.popAndPushNamed(context, '/mante');
-                                    Navigator.of(context).pushNamedAndRemoveUntil('/mante', ModalRoute.withName('/second'));
+                                    // Navigator.of(context).pushNamedAndRemoveUntil('/mante', ModalRoute.withName('/second'));
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(builder: (context) => Tecnico()),
+                                    );
+                                   /* Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) => SecondScreen(),
+                                        ));*/
                                   },
                                 ),
 
@@ -174,15 +185,15 @@ class StuffInTiles extends StatelessWidget {
           dense: true,
           enabled: true,
           isThreeLine: false,
-         // onLongPress: () => print("long press"),
+          // onLongPress: () => print("long press"),
           //onTap: () => print("tap"),
           selected: true,
 
           title:  Text(t.title,
-          style: TextStyle(
-            color: Colors.black54,
-            fontSize: 15,
-          ),));
+            style: TextStyle(
+              color: Colors.black54,
+              fontSize: 15,
+            ),));
 
     return  ExpansionTile(
       key:  PageStorageKey<int>(3),
@@ -204,53 +215,53 @@ List<MyTile> listOfTiles = <MyTile>[
     <MyTile>[
     ],
   ),
-   MyTile(
+  MyTile(
     '¿Cómo solicitar un servicio?',
 
-        <MyTile>[
-           MyTile('Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..'),
-        ],
-  ),
-   MyTile(
-    'Neque porro quisquam est qui',
     <MyTile>[
-       MyTile('Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..'),
+      MyTile('Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..'),
     ],
   ),
-   MyTile(
-     'Neque porro quisquam est qui',
-     <MyTile>[
-       MyTile('Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..'),
-     ],
-   ),
-   MyTile(
-     'Neque porro quisquam est qui',
-     <MyTile>[
-       MyTile('Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..'),
-     ],
-   ),
-   MyTile(
-     'Neque porro quisquam est qui',
-     <MyTile>[
-       MyTile('Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..'),
-     ],
-   ),
-   MyTile(
-     'Neque porro quisquam est qui',
-     <MyTile>[
-       MyTile('Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..'),
-     ],
-   ),
-   MyTile(
-     'Neque porro quisquam est qui',
-     <MyTile>[
-       MyTile('Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..'),
-     ],
-   ),
-   MyTile(
-     'Neque porro quisquam est qui',
-     <MyTile>[
-       MyTile('Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..'),
-     ],
-   ),
+  MyTile(
+    'Neque porro quisquam est qui',
+    <MyTile>[
+      MyTile('Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..'),
+    ],
+  ),
+  MyTile(
+    'Neque porro quisquam est qui',
+    <MyTile>[
+      MyTile('Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..'),
+    ],
+  ),
+  MyTile(
+    'Neque porro quisquam est qui',
+    <MyTile>[
+      MyTile('Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..'),
+    ],
+  ),
+  MyTile(
+    'Neque porro quisquam est qui',
+    <MyTile>[
+      MyTile('Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..'),
+    ],
+  ),
+  MyTile(
+    'Neque porro quisquam est qui',
+    <MyTile>[
+      MyTile('Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..'),
+    ],
+  ),
+  MyTile(
+    'Neque porro quisquam est qui',
+    <MyTile>[
+      MyTile('Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..'),
+    ],
+  ),
+  MyTile(
+    'Neque porro quisquam est qui',
+    <MyTile>[
+      MyTile('Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..'),
+    ],
+  ),
 ];

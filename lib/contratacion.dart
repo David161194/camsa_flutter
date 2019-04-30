@@ -1,3 +1,4 @@
+import 'package:camsa_login/cat%C3%A1logo.dart';
 import 'package:camsa_login/configuracion.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -235,6 +236,7 @@ mail@gmail.com""",
 
                                  child: Icon(Icons.phone,
                                    size: 28.0,
+
                                  ),
                                ),
 
@@ -242,10 +244,6 @@ mail@gmail.com""",
 
 
                            ),
-
-
-
-
 
                          ),
 
@@ -353,6 +351,18 @@ mail@gmail.com""",
            ),
           ],
         ),
+
+      ),
+      floatingActionButton: FloatingActionButton.extended(
+        backgroundColor: Color(0xFF1D539B),
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => Catalogo()),
+          );
+        },
+        icon: Icon(Icons.playlist_add),
+        label: Text("Catálogo"),
 
       ),
     );

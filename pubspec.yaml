@@ -74,7 +74,7 @@ flutter:
   # For details regarding fonts from package dependencies,
   # see https://flutter.io/custom-fonts/#from-packages
   assets:
-    - assets/Logo2.png
+    - assets/tec.png
     - assets/cafe.jpg
     - assets/Logoof.png
     - assets/volante_e-02.png

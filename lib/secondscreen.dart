@@ -3,8 +3,6 @@ import 'package:camsa_login/configuracion.dart';
 import 'package:camsa_login/contratacion.dart';
 import 'package:camsa_login/mis_servicios.dart';
 import 'package:camsa_login/reportes.dart';
-import 'package:camsa_login/ui/login_page.dart';
-import 'package:camsa_login/utils/thirdscreen.dart';
 import 'package:flutter/material.dart';
 
 
