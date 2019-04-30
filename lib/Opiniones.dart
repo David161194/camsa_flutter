@@ -1,8 +1,5 @@
 
 import 'package:camsa_login/configuracion.dart';
-import 'package:camsa_login/quejas.dart';
-import 'package:camsa_login/sugerencias.dart';
-import 'package:camsa_login/utils/thirdscreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:camsa_login/utils/bubble_indication_painter.dart';
@@ -17,7 +14,7 @@ class Opiniones extends StatefulWidget {
 
 class _LoginPageState extends State<Opiniones>{
   //with SingleTickerProviderStateMixin
-  double rating = 3.5;
+  double rating = 0.0;
   int starCount = 5;
 
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
@@ -350,8 +347,10 @@ class _LoginPageState extends State<Opiniones>{
 
                               flex: 5,
                               child:  StarRating(
+
                                 size: 25.0,
                                 rating: rating,
+
                                 color: Colors.orange,
                                 borderColor: Colors.grey,
                                 starCount: starCount,
@@ -481,32 +480,38 @@ class _LoginPageState extends State<Opiniones>{
       padding: EdgeInsets.only(top: 23.0),
       child: Column(
         children: <Widget>[
+
           Card(
             elevation: 2.0,
             color: Colors.white,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(8.0),
             ),
-            child: Container(
-              width: 300.0,
-              height: 190.0,
-              child: Column(
-                children: <Widget>[
-                  Padding(
-                    padding: EdgeInsets.only(
-                        top: 20.0, bottom: 20.0, left: 25.0, right: 25.0),
-                    child: Text("""Mis insatisfacciones: Por medio de la presente, le hago de conocimiento 
+
+              child: Container(
+                width: 300.0,
+                height: 190.0,
+                child: ListView(
+
+                  children: <Widget>[
+
+                    Padding(
+                      padding: EdgeInsets.only(
+                          top: 20.0, bottom: 20.0, left: 25.0, right: 25.0),
+                      child: Text("""Mis insatisfacciones: Por medio de la presente, le hago de conocimiento 
 mi inconformidad con el servicio de entrega y paquetería pues los aparatos que he adquirido en 
 su tienda han llegado dañados.""",
-                      style: TextStyle(
-                          fontFamily: "Sabritas",
-                          fontSize: 16.0,
-                          color: Colors.black),
+                        style: TextStyle(
+                            fontFamily: "Sabritas",
+                            fontSize: 16.0,
+                            color: Colors.black),
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+
               ),
             ),
+
           ),
           /*Padding(
             padding: EdgeInsets.only(top: 10.0),
@@ -542,7 +547,7 @@ su tienda han llegado dañados.""",
             child: Container(
               width: 300.0,
               height: 190.0,
-              child: Column(
+              child: ListView(
                 children: <Widget>[
                   Padding(
                     padding: EdgeInsets.only(
