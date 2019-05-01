@@ -1,21 +1,29 @@
 import 'package:flutter/material.dart';
 
-class Tecnico extends StatelessWidget{
+class Tecnico extends StatefulWidget {
+  Tecnico({Key key}) : super(key: key);
+
+  @override
+  _tec createState() => new _tec();
+}
+
+class _tec extends State<Tecnico>{
+  final GlobalKey<ScaffoldState> _scaffoldKey =  GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Técnico",
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 18.0,
-            fontFamily: "Sabritas",
-          ),
-        ),
-        centerTitle: true,
-      ),
-    /*  endDrawer: Drawer(
+appBar: AppBar(
+title: Text("Técnico",
+style: TextStyle(
+color: Colors.white,
+fontSize: 18.0,
+fontFamily: "Sabritas",
+),
+),
+centerTitle: true,
+),
+/*  endDrawer: Drawer(
         elevation: 10.0,
         child: ListView(
 
@@ -64,118 +72,194 @@ class Tecnico extends StatelessWidget{
           ],
         ),
       ),*/
-    body: Center(
-      child: Column(
-        children: <Widget>[
-          Container(
-            padding: EdgeInsets.only(top: 50.0),
-          ),
-          Container(
+      key: _scaffoldKey,
+body: Center(
+child: Column(
+children: <Widget>[
+Container(
+padding: EdgeInsets.only(top: 30.0),
+),
+Container(
 
-           child: Card(
+child: Card(
 
-              child: InkWell(
-                onTap: () {
+child: InkWell(
+onTap: () {
 
-                },
+},
 
-                child: Container(
-                  padding: EdgeInsets.only(left: 5.0),
-                  width: 300.0,
-                  height: 400.0,
-                  // height: 83.0,
-                  child: Row(
-                    children: <Widget>[
+child: Container(
+
+width: 300.0,
+height: 400.0,
+// height: 83.0,
+child: Row(
+children: <Widget>[
 
 
-                      Expanded(
-                        /* padding: EdgeInsets.only(
+Expanded(
+/* padding: EdgeInsets.only(
                             top: 10.0, bottom: 5.0, left: 25.0, right: 25.0),*/
-                        flex: 5,
-                        child: Column (
-                          children: <Widget>[
-                            Container(
-                              height: 250,
-                              width: 250,
-                              decoration: BoxDecoration(
-                                //border: Border.all(color: (Color(0xFF1D539B)), width: 2.0) ,
-                                image: DecorationImage(
-                                  image: ExactAssetImage('assets/img/tec.png'),
-                                  fit: BoxFit.fill,
-                                ),
-                              ),
-                            ),
-                            Container(
-                              padding: EdgeInsets.only(right: 15, left: 15, top: 15),
-                              child: Text(
-                                """Técnico Chloe Moretz""",
-                                textAlign: TextAlign.left,
-                                style: TextStyle(
-                                  color: Colors.black54,
-                                  fontSize: 15.0,
-                                  // fontFamily: "WorkSansSemiBold",
-                                ),
-
-                              ),
-
-                            ),
-                            Container(
-                              padding: EdgeInsets.symmetric( vertical:5, horizontal: 85.0),
-                              child: Row(
-                              children: <Widget>[
-                                Expanded(
-                                  flex: 5,
-                                child:  Icon(Icons.phone,
-                                    size: 25.0,
-                                  ),
-                                ),
-
-                                Expanded(
-                                  flex: 5,
-                                  child:  Icon(Icons.textsms,
-                                    size: 25.0,
-                                  ),
-                                ),
-                              ],
-
-                              ),
-
-
-                            ),
-                            Container(
-                             child: Text ("30/04/19 a las 15:00 hrs"),
-                            ),
-                          ],
-
-
-                        ),
-
-
-
-
-
-                      ),
-
-                    ],
-                  ),
-
-                ),
-              ),
-              elevation: 10.0,
-              color: Colors.white,
-              // shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.0)),
-
-
-            ),
-          ),
-        ],
-      ),
+flex: 3,
+child: Column (
+children: <Widget>[
+  Container(
+    padding: EdgeInsets.only(top: 30.0),
+  ),
+Container(
+ // padding: EdgeInsets.only(top: 25),
+height: 250,
+width: 250,
+decoration: BoxDecoration(
+border: Border.all(color: (Color(0xFF1D539B)), width: 2.0) ,
+image: DecorationImage(
+image: ExactAssetImage('assets/img/tec.png'),
+fit: BoxFit.fill,
+),
+),
+),
+Container(
+padding: EdgeInsets.only(right: 15, left: 15, top: 15.0),
+child: Text(
+"""Técnico David Robles""",
+textAlign: TextAlign.left,
+    style: TextStyle(
+        fontFamily: "Sabritas",
+        fontSize: 15.0,
+        color: Colors.black
     ),
 
+),
+
+),
+Container(
+padding: EdgeInsets.symmetric(  horizontal: 30.0),
+child: Row(
+children: <Widget>[
+Expanded(
+flex: 5,
+  child:  IconButton(
+    onPressed: () =>{
+      showInSnackBar("Llamando a su técnico asignado..."),
+    },
+    icon: Icon(Icons.phone),
+    iconSize: 25.0,
+    color: Color(0xFF214575),
+    splashColor: Colors.blueGrey,
+  ),
+),
+
+Expanded(
+flex: 5,
+child:  IconButton(
+  onPressed: () =>{
+
+  },
+  icon: Icon(Icons.textsms),
+  iconSize: 25.0,
+  color: Color(0xFF214575),
+  splashColor: Colors.blueGrey,
+),
+),
+],
+
+),
 
 
-    );
+),
+Container(
+  padding: EdgeInsets.only(bottom: 10.0),
+child: Text ("Llegará el día 30/04/19 a las 15:00 hrs",
+    style: TextStyle(
+        fontFamily: "Sabritas",
+        fontSize: 15.0,
+        color: Colors.black,
+    ),
+),
+),
+],
+
+
+),
+
+),
+
+],
+),
+
+),
+),
+elevation: 10.0,
+color: Colors.white,
+// shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.0)),
+
+
+),
+),
+  Container(
+    padding: EdgeInsets.only(top: 25.0),
+    child: Row(
+      children: <Widget>[
+        Container(
+          padding: EdgeInsets.symmetric(horizontal:48),
+   child: Text("Calificación:",
+      style: TextStyle(
+          fontFamily: "Sabritas",
+          fontSize: 15.0,
+          color: Colors.black
+      ),
+        ),
+
+
+        ),
+        Icon(Icons.star_border,
+          size: 25.0,
+          color: Colors.grey,
+        ),
+        Icon(Icons.star_border,
+          size: 25.0,
+          color: Colors.grey,
+        ),
+        Icon(Icons.star_border,
+          size: 25.0,
+          color: Colors.grey,
+        ),
+        Icon(Icons.star_border,
+          size: 25.0,
+          color: Colors.grey,
+        ),
+        Icon(Icons.star_border,
+          size: 25.0,
+          color: Colors.grey,
+        ),
+      ],
+    ),
+  ),
+],
+
+),
+),
+
+
+
+);
+
   }
-
+  void showInSnackBar(String value) {
+    FocusScope.of(context).requestFocus( FocusNode());
+    _scaffoldKey.currentState?.removeCurrentSnackBar();
+    _scaffoldKey.currentState.showSnackBar( SnackBar(
+      content:  Text(
+        value,
+        textAlign: TextAlign.center,
+        style: TextStyle(
+            color: Colors.white,
+            fontSize: 16.0,
+            fontFamily: "WorkSansSemiBold"),
+      ),
+      backgroundColor: Color(0xFF214575),
+      duration: Duration(seconds: 3),
+    ));
+  }
 
 }

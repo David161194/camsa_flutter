@@ -25,16 +25,9 @@ class _LoginPageState extends State<Opiniones>{
   final FocusNode myFocusNodePassword = FocusNode();
   final FocusNode myFocusNodeEmail = FocusNode();
   final FocusNode myFocusNodeName = FocusNode();
-  final _formKey = GlobalKey<FormState>();
-
   TextEditingController loginEmailController = new TextEditingController();
   final myController = TextEditingController();
   TextEditingController loginPasswordController = new TextEditingController();
-
-  bool _obscureTextLogin = true;
-  bool _obscureTextSignup = true;
-  bool _obscureTextSignupConfirm = true;
-
   TextEditingController signupEmailController = new TextEditingController();
   TextEditingController signupNameController = new TextEditingController();
   TextEditingController signupPasswordController = new TextEditingController();

@@ -325,7 +325,6 @@
 }*/
 
 import 'package:camsa_login/configuracion.dart';
-import 'package:camsa_login/style/theme.dart' as prefix0;
 import 'package:flutter/cupertino.dart';
 import "package:flutter/material.dart";
 

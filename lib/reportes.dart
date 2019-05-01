@@ -1,6 +1,4 @@
 import 'package:camsa_login/configuracion.dart';
-import 'package:camsa_login/secondscreen.dart';
-import 'package:camsa_login/tecnico.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -24,7 +22,7 @@ class Reportes extends StatelessWidget{
                 Icons.arrow_back
             ),
             onPressed: () =>{
-            Navigator.of(context).pop(),
+            Navigator.popUntil(context, ModalRoute.withName( '/second')),
             },
 
           ),
@@ -52,10 +50,12 @@ class Reportes extends StatelessWidget{
                 leading: Icon(Icons.account_circle),
                 title: Text('Configuración'),
                 onTap: () {
-                  Navigator.push(
+                 Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => Configuracion()),
                   );
+            //Navigator.of(context).pushNamedAndRemoveUntil('/confi', ModalRoute.withName('/mante'));
+
                 },
               ),
               Divider(
@@ -123,11 +123,8 @@ para concluir con la solicitud. Muchas gracias."""),
                                     // Navigator.popUntil(context, ModalRoute.withName('/mante'));
                                     // Navigator.of(context).pushReplacementNamed('/mante');
                                     //Navigator.popAndPushNamed(context, '/mante');
-                                    // Navigator.of(context).pushNamedAndRemoveUntil('/mante', ModalRoute.withName('/second'));
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(builder: (context) => Tecnico()),
-                                    );
+                                    Navigator.of(context).pushNamedAndRemoveUntil('/mante', ModalRoute.withName('/second'));
+
                                    /* Navigator.push(
                                         context,
                                         MaterialPageRoute(

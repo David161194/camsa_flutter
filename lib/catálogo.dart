@@ -1,7 +1,5 @@
-import 'package:camsa_login/contratacion.dart' as prefix0;
-import 'package:camsa_login/contratacion.dart';
 import 'package:flutter/material.dart';
-
+import 'package:responsive_container/responsive_container.dart';
 bool check1 = false;
 bool check2 = false;
 bool check3 = false;
@@ -29,12 +27,13 @@ class _cata extends State<Catalogo> {
       body: Container(
         child: Column(
           children: <Widget>[
+            ResponsiveContainer(
+              heightPercent: 90.0,
+              widthPercent: 100.0,
+             child: Container(
 
-             Container(
-        height: 500.0,
-                padding: EdgeInsets.only(top: 25),
                 child: ListView(
-                physics: AlwaysScrollableScrollPhysics(),
+                  physics: AlwaysScrollableScrollPhysics(),
                   children:  [
                     Divider(
                       height: 2.0,
@@ -139,10 +138,113 @@ class _cata extends State<Catalogo> {
                     Divider(
                       height: 2.0,
                     ),
+                    ListTile(
+                      leading: CircleAvatar(
+                        backgroundImage: AssetImage('assets/img/Logoof.png'),
+                        radius: 28.0,
+                      ),
+                      title: Text('Control de acceso'),
+                      subtitle: Text("Dispositivos inteligentes instalados en tu hogar que te protegerán ante cualquier intrusión."
+                      ),
+                      trailing:    Checkbox(
+                        value: check5,
+                        onChanged: (bool value) {
+                          setState(() {
+                            check5= value;
+                          });
+                        },
+                      ),
+                    ),
+                    Divider(
+                      height: 2.0,
+                    ),
+                    ListTile(
+                      leading: CircleAvatar(
+                        backgroundImage: AssetImage('assets/img/Logoof.png'),
+                        radius: 28.0,
+                      ),
+                      title: Text('Control de acceso'),
+                      subtitle: Text("Dispositivos inteligentes instalados en tu hogar que te protegerán ante cualquier intrusión."
+                      ),
+                      trailing:    Checkbox(
+                        value: check5,
+                        onChanged: (bool value) {
+                          setState(() {
+                            check5= value;
+                          });
+                        },
+                      ),
+                    ),
+                    Divider(
+                      height: 2.0,
+                    ) ,
+                    ListTile(
+                      leading: CircleAvatar(
+                        backgroundImage: AssetImage('assets/img/Logoof.png'),
+                        radius: 28.0,
+                      ),
+                      title: Text('Control de acceso'),
+                      subtitle: Text("Dispositivos inteligentes instalados en tu hogar que te protegerán ante cualquier intrusión."
+                      ),
+                      trailing:    Checkbox(
+                        value: check5,
+                        onChanged: (bool value) {
+                          setState(() {
+                            check5= value;
+                          });
+                        },
+                      ),
+                    ),
+                    Divider(
+                      height: 2.0,
+                    ) ,
+                    ListTile(
+                      leading: CircleAvatar(
+                        backgroundImage: AssetImage('assets/img/Logoof.png'),
+                        radius: 28.0,
+                      ),
+                      title: Text('Control de acceso'),
+                      subtitle: Text("Dispositivos inteligentes instalados en tu hogar que te protegerán ante cualquier intrusión."
+                      ),
+                      trailing:    Checkbox(
+                        value: check5,
+                        onChanged: (bool value) {
+                          setState(() {
+                            check5= value;
+                          });
+                        },
+                      ),
+                    ),
+                    Divider(
+                      height: 2.0,
+                    ) ,
+                    ListTile(
+                      leading: CircleAvatar(
+                        backgroundImage: AssetImage('assets/img/Logoof.png'),
+                        radius: 28.0,
+                      ),
+                      title: Text('Control de acceso'),
+                      subtitle: Text("Dispositivos inteligentes instalados en tu hogar que te protegerán ante cualquier intrusión."
+                      ),
+                      trailing:    Checkbox(
+                        value: check5,
+                        onChanged: (bool value) {
+                          setState(() {
+                            check5= value;
+                          });
+                        },
+                      ),
+                    ),
+                    Divider(
+                      height: 2.0,
+                    ) ,
                   ],
+
                 ),
 
-             ),
+              ),
+            ),
+
 
 
           ],

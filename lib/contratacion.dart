@@ -6,8 +6,8 @@ import 'package:carousel_slider/carousel_slider.dart';
 
 final List<String> imgList = [
   'assets/img/volante_e-02.png',
-  'assets/img/volante_e-02.png',
-  'assets/img/volante_e-02.png',
+  'assets/img/Logoof.png',
+  'assets/img/cafe.jpg',
 ];
 final List child = map<Widget>(
   imgList,
@@ -18,7 +18,7 @@ final List child = map<Widget>(
       child: ClipRRect(
         borderRadius: BorderRadius.all(Radius.circular(5.0)),
         child: Stack(children: <Widget>[
-          Image.asset('assets/img/volante_e-02.png',
+          Image.asset(i,
 
             fit: BoxFit.fill,
             width: 1000,
@@ -189,25 +189,31 @@ class Contratacion extends StatelessWidget{
                        children: <Widget>[
                          Expanded (
                            flex:3,
-                           child:  Container(
-                             width: 100.0,
-                             height: 100.0,
-                             padding: EdgeInsets.only(left: 10.0),
-                             child: Container(
-                               //child: Image.asset("assets/img/chloe.jpg"),
+                            child: GestureDetector (
+                              onTap: (){
 
-                               decoration: new BoxDecoration(
+                              },
+                              child:  Container(
+                                width: 100.0,
+                                height: 100.0,
+                                padding: EdgeInsets.only(left: 10.0),
+                                child: Container(
 
-                                 image: new DecorationImage(
-                                   fit: BoxFit.fill,
-                                   image: ExactAssetImage("assets/img/icono1.jpg"),
-                                 ),
-                               ),
+                                  //child: Image.asset("assets/img/chloe.jpg"),
 
-                             ),
+                                  decoration: BoxDecoration(
+
+                                    image: DecorationImage(
+                                      fit: BoxFit.fill,
+                                      image: ExactAssetImage("assets/img/icono1.jpg"),
+                                    ),
+                                  ),
+
+                                ),
 
 
-                           ),
+                              ),
+                            ),
                          ),
 
                          Expanded(
@@ -367,6 +373,5 @@ mail@gmail.com""",
       ),
     );
   }
-
-
 }
+

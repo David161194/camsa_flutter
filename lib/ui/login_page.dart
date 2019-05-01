@@ -31,9 +31,6 @@ class _LoginPageState extends State<LoginPage>
   TextEditingController loginPasswordController =  TextEditingController();
 
   bool _obscureTextLogin = true;
-  bool _obscureTextSignup = true;
-  bool _obscureTextSignupConfirm = true;
-
   TextEditingController signupEmailController =  TextEditingController();
   TextEditingController signupNameController =  TextEditingController();
   TextEditingController signupPasswordController =  TextEditingController();
@@ -619,18 +616,6 @@ class _LoginPageState extends State<LoginPage>
   void _toggleLogin() {
     setState(() {
       _obscureTextLogin = !_obscureTextLogin;
-    });
-  }
-
-  void _toggleSignup() {
-    setState(() {
-      _obscureTextSignup = !_obscureTextSignup;
-    });
-  }
-
-  void _toggleSignupConfirm() {
-    setState(() {
-      _obscureTextSignupConfirm = !_obscureTextSignupConfirm;
     });
   }
 }

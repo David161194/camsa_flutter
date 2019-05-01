@@ -3,22 +3,13 @@ import 'package:camsa_login/configuracion.dart';
 import 'package:camsa_login/contratacion.dart';
 import 'package:camsa_login/mis_servicios.dart';
 import 'package:camsa_login/reportes.dart';
+import 'package:camsa_login/tecnico.dart';
 import 'package:flutter/material.dart';
 
 
 class SecondScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final titles = ['Mis servicios', 'boat', 'bus', 'car',
-    'railway', 'run', 'subway', 'transit', 'walk'
-    ];
-    double width = MediaQuery.of(context).size.width;
-    double height = MediaQuery.of(context).size.height;
-    final icons = [Icons.filter_vintage, Icons.filter_vintage,
-    Icons.filter_vintage, Icons.filter_vintage, Icons.filter_vintage,
-    Icons.filter_vintage, Icons.filter_vintage, Icons.filter_vintage,
-    Icons.filter_vintage,
-    ];
     //Navigator.pop(context);
 
     return Scaffold(
@@ -346,6 +337,25 @@ class SecondScreen extends StatelessWidget {
 
 
         ),
+      floatingActionButton:
+      Container(
+        padding: EdgeInsets.only(bottom: 20.0),
+        child: FloatingActionButton.extended(
+
+          backgroundColor: Color(0xFF1D539B),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => Tecnico()),
+            );
+          },
+
+          icon: Icon(Icons.account_box),
+          label: Text("Técnico en camino"),
+
+        ),
+      ),
+
       /*ListView.builder(
         itemCount: titles.length,
         itemBuilder: (context, index) {
