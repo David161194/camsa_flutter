@@ -77,164 +77,218 @@ body: Center(
 child: Column(
 children: <Widget>[
 Container(
-padding: EdgeInsets.only(top: 30.0),
+padding: EdgeInsets.only(top: 5.0),
 ),
-Container(
-
-child: Card(
-
-child: InkWell(
-onTap: () {
-
-},
-
-child: Container(
-
-width: 300.0,
-height: 400.0,
-// height: 83.0,
-child: Row(
-children: <Widget>[
-
-
 Expanded(
+  flex: 8,
+ child: Container(
+
+    child: Card(
+
+      child: InkWell(
+        onTap: () {
+
+        },
+
+        child: Container(
+
+          width: 300.0,
+          height: 410.0,
+// height: 83.0,
+          child: Row(
+            children: <Widget>[
+
+
+              Expanded(
 /* padding: EdgeInsets.only(
                             top: 10.0, bottom: 5.0, left: 25.0, right: 25.0),*/
-flex: 3,
-child: Column (
-children: <Widget>[
-  Container(
-    padding: EdgeInsets.only(top: 30.0),
-  ),
-Container(
- // padding: EdgeInsets.only(top: 25),
-height: 250,
-width: 250,
-decoration: BoxDecoration(
-border: Border.all(color: (Color(0xFF1D539B)), width: 2.0) ,
-image: DecorationImage(
-image: ExactAssetImage('assets/img/tec.png'),
-fit: BoxFit.fill,
-),
-),
-),
-Container(
-padding: EdgeInsets.only(right: 15, left: 15, top: 15.0),
-child: Text(
-"""Técnico David Robles""",
-textAlign: TextAlign.left,
-    style: TextStyle(
-        fontFamily: "Sabritas",
-        fontSize: 15.0,
-        color: Colors.black
-    ),
+                flex: 3,
+                child: Column (
+                  children: <Widget>[
 
-),
+                    Container(
+                      padding: EdgeInsets.only(top: 30.0),
+                    ),
+                    Expanded(
+                      flex: 7,
+                      child: Container(
+                        // padding: EdgeInsets.only(top: 25),
+                        height: 250,
+                        width: 250,
+                        decoration: BoxDecoration(
+                          border: Border.all(color: (Color(0xFF1D539B)), width: 2.0) ,
+                          image: DecorationImage(
+                            image: ExactAssetImage('assets/img/tec.png'),
+                            fit: BoxFit.fill,
+                          ),
+                        ),
+                      ),
+                    ),
 
-),
-Container(
-padding: EdgeInsets.symmetric(  horizontal: 30.0),
-child: Row(
-children: <Widget>[
-Expanded(
-flex: 5,
-  child:  IconButton(
-    onPressed: () =>{
-      showInSnackBar("Llamando a su técnico asignado..."),
-    },
-    icon: Icon(Icons.phone),
-    iconSize: 25.0,
-    color: Color(0xFF214575),
-    splashColor: Colors.blueGrey,
-  ),
-),
+                    Expanded(
+                      flex: 1,
+                     child: Container(
+                        padding: EdgeInsets.only(right: 15, left: 15, top: 10.0,bottom: 10.0),
+                        child: Text(
+                          """Técnico David Robles""",
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                              fontFamily: "Sabritas",
+                              fontSize: 15.0,
+                              color: Colors.black
+                          ),
 
-Expanded(
-flex: 5,
-child:  IconButton(
-  onPressed: () =>{
+                        ),
 
-  },
-  icon: Icon(Icons.textsms),
-  iconSize: 25.0,
-  color: Color(0xFF214575),
-  splashColor: Colors.blueGrey,
-),
-),
-],
+                      ),
+                    ),
+                    Expanded(
+                      flex:2,
+                  child: Container(
+                        padding: EdgeInsets.symmetric(  horizontal: 30.0),
+                        child: Row(
+                          children: <Widget>[
+                            Expanded(
+                              flex: 5,
+                              child: Container(
+                                padding: const EdgeInsets.all(0.0),
+                                decoration:  BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: Color(0xFF214575),
+                                ),
+                                child:  IconButton(
+                                  onPressed: () =>{
+                                  showInSnackBar("Llamando a su técnico asignado..."),
+                                  },
+                                  icon: Icon(Icons.phone),
+                                  iconSize: 25.0,
+                                  color: Colors.white,
+                                  splashColor: Colors.blueGrey,
+                                ),
+                              ),
+                            ),
 
-),
+                            Expanded(
+                              flex: 5,
+                              child: Container(
+                                padding: const EdgeInsets.all(0.0),
+                                decoration:  BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: Color(0xFF214575),
+                                ),
+                                child:  IconButton(
+                                  onPressed: () =>{
+                                  showInSnackBar("Mandando mensaje a su técnico asignado..."),
+                                  },
+                                  icon: Icon(Icons.textsms),
+                                  iconSize: 25.0,
+                                  color: Colors.white,
+                                  splashColor: Colors.blueGrey,
+                                ),
+                              ),
+                            ),
+                          ],
+
+                        ),
 
 
-),
-Container(
-  padding: EdgeInsets.only(bottom: 10.0),
-child: Text ("Llegará el día 30/04/19 a las 15:00 hrs",
-    style: TextStyle(
-        fontFamily: "Sabritas",
-        fontSize: 15.0,
-        color: Colors.black,
-    ),
-),
-),
-],
+                      ),
+                    ),
+                    Expanded(
+                      flex: 1,
+                      child:Container(
+                        padding: EdgeInsets.only(top: 10.0),
+                        child: Text ("Llegará el día 30/04/19 a las 15:00 hrs",
+                          style: TextStyle(
+                            fontFamily: "Sabritas",
+                            fontSize: 15.0,
+                            color: Colors.black,
+                          ),
+                        ),
+                      ),
+                    ),
 
 
-),
 
-),
+                  ],
 
-],
-),
 
-),
-),
-elevation: 10.0,
-color: Colors.white,
+                ),
+
+              ),
+
+            ],
+          ),
+
+        ),
+      ),
+      elevation: 2.0,
+      color: Colors.white,
 // shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.0)),
 
 
-),
-),
-  Container(
-    padding: EdgeInsets.only(top: 25.0),
-    child: Row(
-      children: <Widget>[
-        Container(
-          padding: EdgeInsets.symmetric(horizontal:48),
-   child: Text("Calificación:",
-      style: TextStyle(
-          fontFamily: "Sabritas",
-          fontSize: 15.0,
-          color: Colors.black
-      ),
-        ),
-
-
-        ),
-        Icon(Icons.star_border,
-          size: 25.0,
-          color: Colors.grey,
-        ),
-        Icon(Icons.star_border,
-          size: 25.0,
-          color: Colors.grey,
-        ),
-        Icon(Icons.star_border,
-          size: 25.0,
-          color: Colors.grey,
-        ),
-        Icon(Icons.star_border,
-          size: 25.0,
-          color: Colors.grey,
-        ),
-        Icon(Icons.star_border,
-          size: 25.0,
-          color: Colors.grey,
-        ),
-      ],
     ),
   ),
+),
+
+Expanded(
+  flex: 2,
+  child: Container(
+    // padding: EdgeInsets.symmetric(vertical:3.0) ,
+    child: Card(
+      elevation: 2.0,
+      color: Colors.white,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(8.0),
+      ),
+      child: Container(
+        width: 300.0,
+        height: 110.0,
+        child: Container(
+          padding: EdgeInsets.only(top: 0.0),
+          child: Row(
+            children: <Widget>[
+              Container(
+                padding: EdgeInsets.symmetric(horizontal: 35.0),
+                child: Text("Calificación:",
+                  style: TextStyle(
+                      fontFamily: "Sabritas",
+                      fontSize: 15.0,
+                      color: Colors.black
+                  ),
+                ),
+
+
+              ),
+              Icon(Icons.star_border,
+                size: 25.0,
+                color: Colors.grey,
+              ),
+              Icon(Icons.star_border,
+                size: 25.0,
+                color: Colors.grey,
+              ),
+              Icon(Icons.star_border,
+                size: 25.0,
+                color: Colors.grey,
+              ),
+              Icon(Icons.star_border,
+                size: 25.0,
+                color: Colors.grey,
+              ),
+              Icon(Icons.star_border,
+                size: 25.0,
+                color: Colors.grey,
+              ),
+            ],
+          ),
+        ),
+      ),
+    ),
+  ),
+),
+
+
 ],
 
 ),
