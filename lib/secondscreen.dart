@@ -1,6 +1,8 @@
 import 'package:camsa_login/Opiniones.dart';
 import 'package:camsa_login/configuracion.dart';
+import 'package:camsa_login/confirmar.dart';
 import 'package:camsa_login/contratacion.dart';
+import 'package:camsa_login/contratacion.dart' as prefix0;
 import 'package:camsa_login/mis_servicios.dart';
 import 'package:camsa_login/reportes.dart';
 import 'package:camsa_login/tecnico.dart';
@@ -338,247 +340,46 @@ class SecondScreen extends StatelessWidget {
 
         ),
       floatingActionButton:
-      Container(
-        padding: EdgeInsets.only(bottom: 20.0),
-        child: FloatingActionButton.extended(
+      Stack(
+        children: <Widget>[
+          Container(
+            padding: EdgeInsets.only(left: 30.0),
+           child: Align(
+              alignment: Alignment.bottomLeft,
 
-          backgroundColor: Color(0xFF1D539B),
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => Tecnico()),
-            );
-          },
+              child: FloatingActionButton(
+                heroTag: null,
+                backgroundColor: Color(0xFF1D539B),
+                child: Icon(Icons.check,color: Colors.white,),
+                onPressed: (){
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Confirmar()),
+                  );
+                },
+              ),
+            ),
+          ),
 
-          icon: Icon(Icons.account_box),
-          label: Text("Técnico en camino"),
+          Align(
+            alignment: Alignment.bottomRight,
+            child: FloatingActionButton(
+              heroTag: null,
+              backgroundColor: Color(0xFF1D539B),
+              child: Icon(Icons.person_pin_circle,color: Colors.white,),
+              onPressed: (){
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Tecnico()),
+                );
+              },
+            ),
+            ),
+          ],
 
-        ),
       ),
-
-      /*ListView.builder(
-        itemCount: titles.length,
-        itemBuilder: (context, index) {
-
-
-            Card( //<-- Card widget
-    child: ListTile(
-      onTap: (){
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => ThirdSecreen()),
-        );
-      },
-    leading: Icon(icons[index]),
-    title: Text(titles[index]),
-    ),
     );
-    },*/
-      /*Center(
-         child: Column(
-             mainAxisSize: MainAxisSize.max,
-             children: [
-        Container (
-         padding: EdgeInsets.only(top: 25.0),
-             child: RaisedButton(
-               padding: const EdgeInsets.symmetric(horizontal:  94.0, vertical: 15.0),
 
-               color: Colors.amber,
-               textColor: Colors.white,
-               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0)),
-    onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => ThirdSecreen()),
-            );
-          },
-               child: Text('Mis servicios',
-                 style: TextStyle(
-                   fontSize: 16,
 
-                 ),
-               ),
-        ),
-      ),
-        Container (
-          padding: EdgeInsets.only(top: 25.0),
-          child: RaisedButton(
-             padding: const EdgeInsets.symmetric(horizontal:  75.0, vertical: 15.0),
-            color: Colors.amber,
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0)),
-            textColor: Colors.white,
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => ThirdSecreen()),
-              );
-            },
-            child: Text('Contratar servicios',
-              style: TextStyle(
-                fontSize: 16,
-
-              ),
-            ),
-          ),
-        ),
-        Container (
-          padding: EdgeInsets.only(top: 25.0),
-          child: RaisedButton(
-            padding: const EdgeInsets.symmetric(horizontal:  75.0, vertical: 15.0),
-            color: Colors.amber,
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0)),
-            textColor: Colors.white,
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => ThirdSecreen()),
-              );
-            },
-            child: Text('Contratar servicios',
-              style: TextStyle(
-                fontSize: 16,
-
-              ),
-            ),
-          ),
-        ),
-        Container (
-          padding: EdgeInsets.only(top: 25.0),
-          child: RaisedButton(
-            padding: const EdgeInsets.symmetric(horizontal:  75.0, vertical: 15.0),
-            color: Colors.amber,
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0)),
-            textColor: Colors.white,
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => ThirdSecreen()),
-              );
-            },
-            child: Text('Contratar servicios',
-              style: TextStyle(
-                fontSize: 16,
-
-              ),
-            ),
-          ),
-        ),
-        Container (
-          padding: EdgeInsets.only(top: 25.0),
-          child: RaisedButton(
-            padding: const EdgeInsets.symmetric(horizontal:  75.0, vertical: 15.0),
-            color: Colors.amber,
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0)),
-            textColor: Colors.white,
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => ThirdSecreen()),
-              );
-            },
-            child: Text('Contratar servicios',
-              style: TextStyle(
-                fontSize: 16,
-
-              ),
-            ),
-          ),
-        ),
-      ],
-      ),
-    ),*/ //Botones menú.
-      /*ListView(
-              children: ListTile.divideTiles(
-                context: context,
-                tiles: [
-                  ListTile(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => ThirdSecreen()),
-                      );
-                    },
-                    leading: Icon(Icons.map,
-                      color: Colors.black,
-                      size: 25.0,
-                    ),
-                    title: Text('Tercera vista',
-                      style: TextStyle(
-                        fontSize: 25.0,
-                        color: Colors.black,
-                        fontFamily: "WorkSansBold",
-                      ),
-                    ),
-                  ),
-                  ListTile(
-                    leading: Icon(Icons.map,
-                      color: Colors.black,
-                      size: 25.0,
-                    ),
-                    title: Text('Prueba',
-                      style: TextStyle(
-                        fontSize: 25.0,
-                        color: Colors.black,
-                        fontFamily: "WorkSansBold",
-                      ),
-                    ),
-                  ),
-                  ListTile(
-                    leading: CircleAvatar(
-                      backgroundColor: Colors.amber,
-                      /*Icon(Icons.map,
-               color: Colors.black,
-               size: 25.0,*/
-                    ),
-                    title: Text('Prueba',
-                      style: TextStyle(
-                        fontSize: 25.0,
-                        color: Colors.black,
-                        fontFamily: "WorkSansBold",
-                      ),
-                    ),
-                  ),
-                  ListTile(
-                    leading: Icon(Icons.map,
-                      color: Colors.black,
-                      size: 25.0,
-                    ),
-                    title: Text('Prueba',
-                      style: TextStyle(
-                        fontSize: 25.0,
-                        color: Colors.black,
-                        fontFamily: "WorkSansBold",
-                      ),
-                    ),
-                  ),
-                  ListTile(
-                    leading: Icon(Icons.map,
-                      color: Colors.black,
-                      size: 25.0,
-                    ),
-                    title: Text('Prueba',
-                      style: TextStyle(
-                        fontSize: 25.0,
-                        color: Colors.black,
-                        fontFamily: "WorkSansBold",
-                      ),
-                    ),
-                  ),
-                  ListTile(
-                    leading: Icon(Icons.map,
-                      color: Colors.black,
-                      size: 25.0,
-                    ),
-                    title: Text('Prueba',
-                      style: TextStyle(
-                        fontSize: 25.0,
-                        color: Colors.black,
-                        fontFamily: "WorkSansBold",
-                      ),
-                    ),
-                  ),
-                ],
-              ).toList(),*/
-             );
   }
 }

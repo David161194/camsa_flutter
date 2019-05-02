@@ -14,7 +14,7 @@ class _tec extends State<Tecnico>{
     // TODO: implement build
     return Scaffold(
 appBar: AppBar(
-title: Text("Técnico",
+title: Text("Técnico en camino",
 style: TextStyle(
 color: Colors.white,
 fontSize: 18.0,
@@ -196,16 +196,19 @@ Expanded(
                     ),
                     Expanded(
                       flex: 1,
-                      child:Container(
-                        padding: EdgeInsets.only(top: 10.0),
-                        child: Text ("Llegará el día 30/04/19 a las 15:00 hrs",
-                          style: TextStyle(
-                            fontFamily: "Sabritas",
-                            fontSize: 15.0,
-                            color: Colors.black,
+                      child:Center(
+                        child:Container(
+                          padding: EdgeInsets.only(top: 0.0),
+                          child: Text ("Día 30/04/19 de las 9:00 a las 15:00",
+                            style: TextStyle(
+                              fontFamily: "Sabritas",
+                              fontSize: 15.0,
+                              color: Colors.black,
+                            ),
                           ),
                         ),
                       ),
+
                     ),
 
 
