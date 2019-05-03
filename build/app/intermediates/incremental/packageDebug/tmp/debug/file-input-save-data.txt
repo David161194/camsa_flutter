@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Fri May 03 10:47:30 CDT 2019
+#Fri May 03 13:17:40 CDT 2019
 17.baseType=DIRECTORY
 4.path=flutter_assets/AssetManifest.json
 22.set=ASSET

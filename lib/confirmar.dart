@@ -1,4 +1,5 @@
 import 'package:camsa_login/secondscreen.dart';
+import 'package:camsa_login/style/theme.dart' as prefix0;
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
@@ -121,7 +122,12 @@ class _confir extends State<Confirmar> {
                               lastDate: DateTime(2030),
                                builder: (BuildContext context, Widget child) {
                                 return Theme(
-                                data: ThemeData.light(),
+                                data: ThemeData(
+                                  brightness: Brightness.light,
+                                  primaryColor: Colors.blue[800],
+                                  accentColor: Colors.cyan[300],
+                                  fontFamily: "Doritos"
+                                ),
                                  child: child,
                                );
                                },
