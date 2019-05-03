@@ -114,7 +114,19 @@ class _confir extends State<Confirmar> {
                             /* setState(() {
                             _visible = !_visible;
                           });*/
-                            DatePicker.showDatePicker(context,
+                          Future<DateTime> selectedDate = showDatePicker(
+                           context: context,
+                            initialDate: DateTime.now(),
+                             firstDate: DateTime(2019, 5, 3),
+                              lastDate: DateTime(2030),
+                               builder: (BuildContext context, Widget child) {
+                                return Theme(
+                                data: ThemeData.light(),
+                                 child: child,
+                               );
+                               },
+                      );
+                           /* DatePicker.showDatePicker(context,
                               showTitleActions: true,
                               minTime: DateTime(2019, 5, 2),
                               maxTime: DateTime(2021, 6, 7),
@@ -134,7 +146,7 @@ class _confir extends State<Confirmar> {
                                     MaterialPageRoute(builder: (context) => SecondScreen()),
                                   );
 
-                                }, currentTime: DateTime.now(), locale: LocaleType.es);
+                                }, currentTime: DateTime.now(), locale: LocaleType.es); */
                           },
                           child: Container(
                             margin: EdgeInsets.only(
