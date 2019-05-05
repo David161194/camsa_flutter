@@ -3,11 +3,10 @@ import 'package:camsa_login/configuracion.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-
 final List<String> imgList = [
   'assets/img/volante_e-02.png',
   'assets/img/Logoof.png',
-  'assets/img/cafe.jpg',
+  'assets/img/volante_e-02.png',
 ];
 final List child = map<Widget>(
   imgList,
@@ -134,7 +133,7 @@ class Contratacion extends StatelessWidget{
         child: Column(
           children: [
             Container(
-             /* height: 220.0,
+              /* height: 220.0,
                padding: EdgeInsets.only(bottom: 25.0),
                decoration: BoxDecoration(
                  border: Border.all(color: (Colors.amber), width: 2.0) ,
@@ -143,13 +142,13 @@ class Contratacion extends StatelessWidget{
                    fit: BoxFit.fitWidth,
                  ),
                ),*/
-               child: manualCarouselDemo,
-             ),
+              child: manualCarouselDemo,
+            ),
 
 
-              Container(
-               padding: EdgeInsets.only(top: 25),
-               /*child: ListView(
+            Container(
+              padding: EdgeInsets.only(top: 25),
+              /*child: ListView(
                   children:  [
                     Divider(
                       height: 2.0,
@@ -175,186 +174,206 @@ class Contratacion extends StatelessWidget{
                 ),*/
               child: Card(
 
-                 child: InkWell(
-                   onTap: () {
+                child: InkWell(
+                  onTap: () {
 
-                   },
+                  },
 
-                   child: Container(
-                     padding: EdgeInsets.only(left: 5.0),
-                     width: 300.0,
-                     height: 120.0,
-                     // height: 83.0,
-                     child: Row(
-                       children: <Widget>[
-                         Expanded (
-                           flex:3,
-                            child: GestureDetector (
-                              onTap: (){
+                  child: Container(
+                    padding: EdgeInsets.only(left: 5.0),
+                    width: 300.0,
+                    height: 120.0,
+                    // height: 83.0,
+                    child: Row(
+                      children: <Widget>[
+                        Expanded (
+                          flex:3,
+                          child: GestureDetector (
+                            onTap: (){
 
-                              },
-                              child:  Container(
-                                width: 100.0,
-                                height: 100.0,
-                                padding: EdgeInsets.only(left: 10.0),
-                                child: Container(
+                            },
+                            child:  Container(
+                              width: 100.0,
+                              height: 100.0,
+                              padding: EdgeInsets.only(left: 10.0),
+                              child: Container(
 
-                                  //child: Image.asset("assets/img/chloe.jpg"),
+                                //child: Image.asset("assets/img/chloe.jpg"),
 
-                                  decoration: BoxDecoration(
+                                decoration: BoxDecoration(
 
-                                    image: DecorationImage(
-                                      fit: BoxFit.fill,
-                                      image: ExactAssetImage("assets/img/icono1.jpg"),
-                                    ),
+                                  image: DecorationImage(
+                                    fit: BoxFit.fill,
+                                    image: ExactAssetImage("assets/img/icono1.jpg"),
+                                  ),
+                                ),
+
+                              ),
+
+
+                            ),
+                          ),
+                        ),
+
+                        Expanded(
+                          /* padding: EdgeInsets.only(
+                            top: 10.0, bottom: 5.0, left: 25.0, right: 25.0),*/
+                          flex: 5,
+                          child: Column (
+                            children: <Widget>[
+                              Container(
+                                padding: EdgeInsets.symmetric(vertical: 15, horizontal: 15),
+                                child: Text(
+                                  """Asesora Chloe Moretz
+mail@gmail.com""",
+                                  textAlign: TextAlign.left,
+                                  style: TextStyle(
+                                    color: Colors.black54,
+                                    fontSize: 15.0,
+                                    // fontFamily: "WorkSansSemiBold",
                                   ),
 
                                 ),
 
+                              ),
+                              Row(
+                                children: <Widget>[
 
+                                  Container(
+                                    padding: EdgeInsets.symmetric(horizontal: 40.0),
+                                    child: Icon(Icons.phone,
+                                      size: 28.0,
+                                    ),
+                                  ),
+                                  Container(
+                                    child: Icon(IconData(0xe900, fontFamily: 'whats'),
+                                      size: 28.0,
+                                      color: Colors.green,
+                                    ),
+                                  ),
+                                ],
+                              ),
+
+
+                            ],
+
+
+                          ),
+
+                        ),
+
+                      ],
+                    ),
+
+                  ),
+                ),
+                elevation: 2.0,
+                color: Colors.white,
+                // shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.0)),
+
+
+              ),
+            ),
+
+
+            Card(
+
+              child: InkWell(
+                onTap: () {
+
+                },
+
+                child: Container(
+                  padding: EdgeInsets.only(left: 5.0),
+                  width: 300.0,
+                  height: 120.0,
+                  // height: 83.0,
+                  child: Row(
+                    children: <Widget>[
+                      Expanded (
+                        flex:3,
+                        child:  Container(
+                          width: 100.0,
+                          height: 100.0,
+                          padding: EdgeInsets.only(left: 10.0),
+                          child: Container(
+                            //child: Image.asset("assets/img/chloe.jpg"),
+
+                            decoration: new BoxDecoration(
+
+                              image: new DecorationImage(
+                                fit: BoxFit.fill,
+                                image: ExactAssetImage("assets/img/icono1.jpg"),
                               ),
                             ),
-                         ),
 
-                         Expanded(
-                           /* padding: EdgeInsets.only(
+                          ),
+
+
+                        ),
+                      ),
+
+                      Expanded(
+                        /* padding: EdgeInsets.only(
                             top: 10.0, bottom: 5.0, left: 25.0, right: 25.0),*/
-                           flex: 5,
-                           child: Column (
-                             children: <Widget>[
-                               Container(
-                                 padding: EdgeInsets.symmetric(vertical: 15, horizontal: 15),
-                                 child: Text(
-                                   """Asesora Chloe Moretz
+                        flex: 5,
+                        child: Column (
+                          children: <Widget>[
+                            Container(
+                              padding: EdgeInsets.symmetric(vertical: 15, horizontal: 15),
+                              child: Text(
+                                """Asesora Chloe Moretz
 mail@gmail.com""",
-                                   textAlign: TextAlign.left,
-                                   style: TextStyle(
-                                     color: Colors.black54,
-                                     fontSize: 15.0,
-                                     // fontFamily: "WorkSansSemiBold",
-                                   ),
+                                textAlign: TextAlign.left,
+                                style: TextStyle(
+                                  color: Colors.black54,
+                                  fontSize: 15.0,
+                                  // fontFamily: "WorkSansSemiBold",
+                                ),
 
-                                 ),
+                              ),
 
-                               ),
-                               Container(
+                            ),
+                            Row(
+                              children: <Widget>[
 
+                                Container(
+                                  padding: EdgeInsets.symmetric(horizontal: 40.0),
+                                  child: Icon(Icons.phone,
+                                    size: 28.0,
+                                  ),
+                                ),
+                                Container(
+                                  child: Icon(IconData(0xe900, fontFamily: 'whats'),
+                                    size: 28.0,
+                                    color: Colors.green,
+                                  ),
+                                ),
+                              ],
+                            ),
 
-                                 child: Icon(Icons.phone,
-                                   size: 28.0,
-
-                                 ),
-                               ),
-
-                             ],
-
-
-                           ),
-
-                         ),
-
-                       ],
-                     ),
-
-                   ),
-                 ),
-                 elevation: 2.0,
-                 color: Colors.white,
-                 // shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.0)),
+                          ],
 
 
-               ),
+                        ),
+
+
+
+
+
+                      ),
+
+                    ],
+                  ),
+
+                ),
               ),
+              elevation: 2.0,
+              color: Colors.white,
+              // shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.0)),
 
 
-           Card(
-
-             child: InkWell(
-               onTap: () {
-
-               },
-
-               child: Container(
-                 padding: EdgeInsets.only(left: 5.0),
-                 width: 300.0,
-                 height: 120.0,
-                 // height: 83.0,
-                 child: Row(
-                   children: <Widget>[
-                     Expanded (
-                       flex:3,
-                       child:  Container(
-                         width: 100.0,
-                         height: 100.0,
-                         padding: EdgeInsets.only(left: 10.0),
-                         child: Container(
-                           //child: Image.asset("assets/img/chloe.jpg"),
-
-                                    decoration: new BoxDecoration(
-
-                                      image: new DecorationImage(
-                                        fit: BoxFit.fill,
-                                        image: ExactAssetImage("assets/img/icono1.jpg"),
-                                      ),
-                                    ),
-
-                         ),
-
-
-                       ),
-                     ),
-
-                     Expanded(
-                       /* padding: EdgeInsets.only(
-                            top: 10.0, bottom: 5.0, left: 25.0, right: 25.0),*/
-                       flex: 5,
-                       child: Column (
-                         children: <Widget>[
-                           Container(
-                             padding: EdgeInsets.symmetric(vertical: 15, horizontal: 15),
-                             child: Text(
-                               """Asesora Chloe Moretz
-mail@gmail.com""",
-                               textAlign: TextAlign.left,
-                               style: TextStyle(
-                                 color: Colors.black54,
-                                 fontSize: 15.0,
-                                 // fontFamily: "WorkSansSemiBold",
-                               ),
-
-                             ),
-
-                           ),
-                           Container(
-
-
-                             child: Icon(Icons.phone,
-                                 size: 28.0,
-                             ),
-                           ),
-
-                         ],
-
-
-                       ),
-
-
-
-
-
-                     ),
-
-                   ],
-                 ),
-
-               ),
-             ),
-             elevation: 2.0,
-             color: Colors.white,
-             // shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.0)),
-
-
-           ),
+            ),
           ],
         ),
 
@@ -374,4 +393,3 @@ mail@gmail.com""",
     );
   }
 }
-

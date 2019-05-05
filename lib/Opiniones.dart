@@ -1,4 +1,3 @@
-
 import 'package:camsa_login/configuracion.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -16,6 +15,58 @@ class _LoginPageState extends State<Opiniones>{
   //with SingleTickerProviderStateMixin
   double rating = 0.0;
   int starCount = 5;
+  var _value = "1";
+
+  DropdownButton _itemDown() => DropdownButton<String>(
+    items: [
+      DropdownMenuItem(
+        value: "1",
+        child: Row(
+
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            /*  Icon(Icons.account_circle,
+              color: Colors.black,
+            ),*/
+            SizedBox(width: 10),
+            Text(
+              "Razón",
+            ),
+          ],
+        ),
+      ),
+      DropdownMenuItem(
+        value: "2",
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            /*Icon(Icons.account_circle,
+              color: Colors.black,
+            ),*/
+
+            SizedBox(width: 10),
+            Text(
+              "Razón 1",
+            ),
+          ],
+        ),
+      ),
+    ],
+    onChanged: (value) {
+      setState(() {
+        _value = value;
+      });
+    },
+
+    value: _value,
+    elevation: 2,
+    isExpanded: true,
+    style: TextStyle(
+      color: Colors.black54,
+      fontSize: 18.0,
+      fontFamily: "Sabritas",
+    ),
+  );
 
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
 
@@ -130,80 +181,93 @@ class _LoginPageState extends State<Opiniones>{
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           InkWell(
-                          onTap: () {
-            /* Navigator.push(
+                            onTap: () {
+                              /* Navigator.push(
                           context,
                           MaterialPageRoute(builder: (context) => Quejas()),
                            );*/
 
-                    showDialog(
-                     context: context,
-                       builder: (BuildContext context) {
+                              showDialog(
+                                context: context,
+                                builder: (BuildContext context) {
 
-                       return Center(
-                         child:  AlertDialog(
-                           title: Text("Envia tu insatisfacción"),
-                         content:  TextField(
-                          maxLength: 120,
-                         maxLines: 5,
-                         decoration: InputDecoration(
-                             border: OutlineInputBorder(),
-                             hintText: 'Ingresa tu insatisfacción'
-                         ),
-                         ),
-                         actions: <Widget>[
-                         FlatButton(
-                         child:  Text("Envíar"),
-                         onPressed: () {
-                         /*Navigator.push(
+                                  return Center(
+                                    child:  AlertDialog(
+                                      title: Text("Envia tu insatisfacción"),
+                                      content:   Container(
+                                        height: 205,
+                                        width: 100,
+                                        child: Column(
+                                          children: <Widget>[
+                                            TextField(
+                                              maxLength: 120,
+                                              maxLines: 5,
+                                              decoration: InputDecoration(
+                                                  border: OutlineInputBorder(),
+                                                  hintText: 'Ingresa tu insatisfacción'
+                                              ),
+                                            ),
+                                            Container(
+                                              padding: EdgeInsets.symmetric(horizontal: 10),
+                                              color: Colors.white,
+                                              child: _itemDown(),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                      actions: <Widget>[
+                                        FlatButton(
+                                          child:  Text("Envíar"),
+                                          onPressed: () {
+                                            /*Navigator.push(
                                      context,
                                      MaterialPageRoute(builder: (context) => LoginPage()),
                                  );
                          Navigator.pushNamedAndRemoveUntil(context, '/', (_) => false);*/
-                           Navigator.of(context).pop();
-                         },
-                         ),
+                                            Navigator.of(context).pop();
+                                          },
+                                        ),
 
-                         FlatButton(
-                         child:  Text("Cancelar"),
-                         onPressed: () {
-                         Navigator.of(context).pop();
-                         },
-                         ),
-                         ],
-                         ),
-                       );
+                                        FlatButton(
+                                          child:  Text("Cancelar"),
+                                          onPressed: () {
+                                            Navigator.of(context).pop();
+                                          },
+                                        ),
+                                      ],
+                                    ),
+                                  );
 
                                 },
                               );
-                              },
-                           child: Container(
-                            margin: EdgeInsets.only(
-                              top: 20.0,
-                              right: 20.0,
-                              left: 20.0
-                            ),
-                            height: 44.0,
-                            width: 130.0,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20.0),
-                              color: Color(0xFF214575),
-                            ),
-                            child: Center(
-                              child: Text("Insatisfacción",
-                                  style: TextStyle(
-                                    fontFamily: "Sabritas",
-                                    fontSize: 16.0,
-                                    color: Colors.white
-                              )
+                            },
+                            child: Container(
+                              margin: EdgeInsets.only(
+                                  top: 20.0,
+                                  right: 20.0,
+                                  left: 20.0
+                              ),
+                              height: 44.0,
+                              width: 130.0,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20.0),
+                                color: Color(0xFF214575),
+                              ),
+                              child: Center(
+                                child: Text("Insatisfacción",
+                                    style: TextStyle(
+                                        fontFamily: "Sabritas",
+                                        fontSize: 16.0,
+                                        color: Colors.white
+                                    )
+                                ),
                               ),
                             ),
                           ),
-                        ),
                           //Container(),
                           InkWell(
                             onTap: () {
-                             /* Navigator.push(
+                              /* Navigator.push(
                                 context,
                                 MaterialPageRoute(builder: (context) => Sugerencias()),
                               );*/
@@ -301,7 +365,7 @@ class _LoginPageState extends State<Opiniones>{
                       }
                     },
                     children: <Widget>[
-                       ConstrainedBox(
+                      ConstrainedBox(
                         constraints: BoxConstraints.expand(),
                         child: _buildSignIn(context),
                       ),
@@ -316,7 +380,7 @@ class _LoginPageState extends State<Opiniones>{
                 ),
                 Padding(
                   padding: EdgeInsets.only(bottom: 270.0),
-                 child: Container(
+                  child: Container(
                     //padding: EdgeInsets.only(left: 10.0,bottom: 20.0, top: 20),
                     child: Column(
                       children:[
@@ -481,26 +545,26 @@ class _LoginPageState extends State<Opiniones>{
               borderRadius: BorderRadius.circular(8.0),
             ),
 
-              child: Container(
-                width: 300.0,
-                height: 190.0,
-                child: ListView(
+            child: Container(
+              width: 300.0,
+              height: 190.0,
+              child: ListView(
 
-                  children: <Widget>[
+                children: <Widget>[
 
-                    Padding(
-                      padding: EdgeInsets.only(
-                          top: 20.0, bottom: 20.0, left: 25.0, right: 25.0),
-                      child: Text("""Mis insatisfacciones: Por medio de la presente, le hago de conocimiento 
+                  Padding(
+                    padding: EdgeInsets.only(
+                        top: 20.0, bottom: 20.0, left: 25.0, right: 25.0),
+                    child: Text("""Mis insatisfacciones: Por medio de la presente, le hago de conocimiento 
 mi inconformidad con el servicio de entrega y paquetería pues los aparatos que he adquirido en 
 su tienda han llegado dañados.""",
-                        style: TextStyle(
-                            fontFamily: "Sabritas",
-                            fontSize: 16.0,
-                            color: Colors.black),
-                      ),
+                      style: TextStyle(
+                          fontFamily: "Sabritas",
+                          fontSize: 16.0,
+                          color: Colors.black),
                     ),
-                  ],
+                  ),
+                ],
 
               ),
             ),

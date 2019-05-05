@@ -10,12 +10,64 @@ class Configuracion extends StatefulWidget {
   _confi createState() => _confi();
 }
 class _confi extends State<Configuracion> {
+  var _value = "1";
+
+  DropdownButton _itemDown() => DropdownButton<String>(
+    items: [
+      DropdownMenuItem(
+        value: "1",
+        child: Row(
+
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            /* Icon(Icons.account_circle,
+              color: Colors.black,
+            ),*/
+            SizedBox(width: 10),
+            Text(
+              "Razón",
+            ),
+          ],
+        ),
+      ),
+      DropdownMenuItem(
+        value: "2",
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            /* Icon(Icons.account_circle,
+              color: Colors.black,
+            ),*/
+
+            SizedBox(width: 10),
+            Text(
+              "Razón 1",
+            ),
+          ],
+        ),
+      ),
+    ],
+    onChanged: (value) {
+      setState(() {
+        _value = value;
+      });
+    },
+
+    value: _value,
+    elevation: 2,
+    isExpanded: true,
+    style: TextStyle(
+      color: Colors.black54,
+      fontSize: 18.0,
+      fontFamily: "Sabritas",
+    ),
+  );
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
       appBar: AppBar(
-        title: Text("Configurción",
+        title: Text("Configuración",
           style: TextStyle(
             color: Colors.white,
             fontSize: 18.0,
@@ -57,40 +109,60 @@ class _confi extends State<Configuracion> {
                         child: RaisedButton(
                           textColor: Colors.black,
                           onPressed: ()=>{
-                          /*Navigator.push(
+                            /*Navigator.push(
                           context,
                           MaterialPageRoute(builder: (context) => SecondScreen ()),
                         ),*/
-                          showDialog(
-                            context: context,
-                            builder: (BuildContext context) {
+                            showDialog(
+                              context: context,
+                              builder: (BuildContext context) {
 
-                              return AlertDialog(
-                                title: Text("Cancelar cuenta"),
-                                content:  Text("""¿Desea solicitar una cancelación de cuenta?
-En un momento nos estaríamos comunicando con usted."""),
-                                actions: <Widget>[
-                                  FlatButton(
-                                    child:  Text("Aceptar"),
-                                    onPressed: () {
-                                      //Navigator.pushNamedAndRemoveUntil(context, '/mante', (_) => false);
-                                      // Navigator.popUntil(context, ModalRoute.withName('/mante'));
-                                      // Navigator.of(context).pushReplacementNamed('/mante');
-                                      //Navigator.popAndPushNamed(context, '/mante');
-                                      Navigator.of(context).pop();
-                                    },
+                                return AlertDialog(
+                                  title: Text("Cancelar cuenta"),
+                                  content: Container(
+                                    height: 124,
+                                    width: 100,
+                                    child: Column(
+                                      children: <Widget>[
+                                        Container(
+                                          padding: EdgeInsets.symmetric(horizontal: 10),
+                                          color: Colors.white,
+                                          child: _itemDown(),
+                                        ),
+                                        Text("""¿Deseas solicitar una cancelación de cuenta?
+En un momento nos estaríamos comunicando contigo."""),
+                                      ],
+                                    ),
                                   ),
 
-                                  FlatButton(
-                                    child:  Text("Cancelar"),
-                                    onPressed: () {
-                                      Navigator.of(context).pop();
-                                    },
-                                  ),
-                                ],
-                              );
-                            },
-                          ),
+
+
+
+
+
+
+                                  actions: <Widget>[
+                                    FlatButton(
+                                      child:  Text("Aceptar"),
+                                      onPressed: () {
+                                        //Navigator.pushNamedAndRemoveUntil(context, '/mante', (_) => false);
+                                        // Navigator.popUntil(context, ModalRoute.withName('/mante'));
+                                        // Navigator.of(context).pushReplacementNamed('/mante');
+                                        //Navigator.popAndPushNamed(context, '/mante');
+                                        Navigator.of(context).pop();
+                                      },
+                                    ),
+
+                                    FlatButton(
+                                      child:  Text("Cancelar"),
+                                      onPressed: () {
+                                        Navigator.of(context).pop();
+                                      },
+                                    ),
+                                  ],
+                                );
+                              },
+                            ),
                           },
                           color: Colors.red,
                           child:  Text(
@@ -238,8 +310,8 @@ En un momento nos estaríamos comunicando con usted."""),
       ),
     );
   }
-
-
 }
+
+
 
 
