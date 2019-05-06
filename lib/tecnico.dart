@@ -118,7 +118,7 @@ Expanded(
                         decoration: BoxDecoration(
                           border: Border.all(color: (Color(0xFF1D539B)), width: 2.0) ,
                           image: DecorationImage(
-                            image: ExactAssetImage('assets/img/tec.png'),
+                            image: ExactAssetImage('assets/img/tec.jpg'),
                             fit: BoxFit.fill,
                           ),
                         ),

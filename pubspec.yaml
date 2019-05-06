@@ -26,7 +26,7 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/tec.png
+    - assets/tec.jpg
     - assets/cafe.jpg
     - assets/Logoof.png
     - assets/volante_e-02.png
