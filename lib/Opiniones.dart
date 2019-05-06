@@ -51,6 +51,22 @@ class _LoginPageState extends State<Opiniones>{
           ],
         ),
       ),
+      DropdownMenuItem(
+        value: "3",
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            /*Icon(Icons.account_circle,
+              color: Colors.black,
+            ),*/
+
+            SizedBox(width: 10),
+            Text(
+              "Razón 2",
+            ),
+          ],
+        ),
+      ),
     ],
     onChanged: (value) {
       setState(() {

@@ -35,6 +35,11 @@ flutter:
     - assets/cuenta.png
     - assets/faqs.png
     - assets/mi_exp.png
+    - assets/control.png
+    - assets/electrico.png
+    - assets/llama.png
+    - assets/alarma.png
+    - assets/camara.png
 
   fonts:
     - family: whats

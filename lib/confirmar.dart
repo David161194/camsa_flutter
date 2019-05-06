@@ -27,8 +27,8 @@ class _confir extends State<Confirmar> {
 
           return AlertDialog(
             title: Text("Reagendar fecha"),
-            content:  Text("""¿Está seguro de querer reagendar la fecha en el día seleccionado?
-Considere que sólo puede reagendar una vez la fecha."""),
+            content:  Text("""¿Estás seguro de querer reagendar la fecha en el día seleccionado?
+Considera que sólo puede reagendar una vez."""),
             actions: <Widget>[
               FlatButton(
                 child:  Text("Aceptar"),
@@ -111,7 +111,7 @@ Considere que sólo puede reagendar una vez la fecha."""),
 
                                 return AlertDialog(
                                   title: Text("Confirmar cancelación"),
-                                  content:  Text("¿Está seguro de cancelar la visita de nuestro técnico?"),
+                                  content:  Text("¿Estás seguro de cancelar la visita de nuestro técnico?"),
                                   actions: <Widget>[
                                     FlatButton(
                                       child:  Text("Aceptar"),

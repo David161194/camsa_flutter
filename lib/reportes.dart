@@ -101,7 +101,7 @@ class Reportes extends StatelessWidget{
 
                 return AlertDialog(
                   title: Text("Solicitar técnico"),
-                  content:  Text("""¿Desea solicitar los servicios de alguno de nuestros técnicos?
+                  content:  Text("""¿Deseas solicitar los servicios de alguno de nuestros técnicos?
 Es posible que se agregue un monto extra por el servicio."""),
                   actions: <Widget>[
                     FlatButton(
@@ -113,7 +113,7 @@ Es posible que se agregue un monto extra por el servicio."""),
 
                             return AlertDialog(
                               title: Text("Solicitar técnico"),
-                              content:  Text("""En un momento nos comunicaremos con usted 
+                              content:  Text("""En un momento nos comunicaremos contigo
 para concluir con la solicitud. Muchas gracias."""),
                               actions: <Widget>[
                                 FlatButton(

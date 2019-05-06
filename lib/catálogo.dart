@@ -40,7 +40,7 @@ class _cata extends State<Catalogo> {
                     ),
                     ListTile(
                       leading: CircleAvatar(
-                        backgroundImage: AssetImage('assets/img/Logoof.png'),
+                        backgroundImage: AssetImage('assets/img/alarma.png'),
                         radius: 28.0,
                       ),
                       title: Text('Sistema de alarma'),
@@ -60,7 +60,7 @@ class _cata extends State<Catalogo> {
                     ),
                     ListTile(
                       leading: CircleAvatar(
-                        backgroundImage: AssetImage('assets/img/Logoof.png'),
+                        backgroundImage: AssetImage('assets/img/camara.png'),
                         radius: 28.0,
                       ),
                       title: Text('Cámara'),
@@ -80,7 +80,7 @@ class _cata extends State<Catalogo> {
                     ),
                     ListTile(
                       leading: CircleAvatar(
-                        backgroundImage: AssetImage('assets/img/Logoof.png'),
+                        backgroundImage: AssetImage('assets/img/llama.png'),
                         radius: 28.0,
                       ),
                       title: Text('Incendio'),
@@ -100,7 +100,7 @@ class _cata extends State<Catalogo> {
                     ),
                     ListTile(
                       leading: CircleAvatar(
-                        backgroundImage: AssetImage('assets/img/Logoof.png'),
+                        backgroundImage: AssetImage('assets/img/electrico.png'),
                         radius: 28.0,
                       ),
                       title: Text('Cerca Eléctrica'),
@@ -120,7 +120,7 @@ class _cata extends State<Catalogo> {
                     ),
                     ListTile(
                       leading: CircleAvatar(
-                        backgroundImage: AssetImage('assets/img/Logoof.png'),
+                        backgroundImage: AssetImage('assets/img/control.png'),
                         radius: 28.0,
                       ),
                       title: Text('Control de acceso'),
