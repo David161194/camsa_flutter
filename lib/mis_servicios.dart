@@ -1,8 +1,7 @@
 import 'package:camsa_login/configuracion.dart';
 import 'package:flutter/cupertino.dart';
 import "package:flutter/material.dart";
-import 'package:open_file/open_file.dart';
-
+import 'package:url_launcher/url_launcher.dart';
 
 class Mis_servicios extends StatefulWidget {
   @override
@@ -115,16 +114,17 @@ class _DropDownButtonState extends State<Mis_servicios> {
 
   @override
   Widget build(BuildContext context) {
-    String _openResult = 'Unknown';
 
-    Future<void> openFile() async {
-      final filePath = 'assets/files/factura.pdf';
-      final message = await OpenFile.open(filePath);
 
-      setState(() {
-        _openResult = message;
-      });
+    _launchURL() async {
+      const url = 'https://drive.google.com/file/d/1r3ikL8cvFo6tVSlqSFPqynMuK0DRIEgJ/view?usp=sharing';
+      if (await canLaunch(url)) {
+        await launch(url);
+      } else {
+        throw 'Could not launch $url';
+      }
     }
+
     return Scaffold(
       appBar: AppBar(
         title: Text("Mi Cuenta",
@@ -420,9 +420,7 @@ class _DropDownButtonState extends State<Mis_servicios> {
                                 Icons.file_download,
                                 size: 28.0,
                               ),
-                              onPressed: (){
-                                OpenFile.open('assets/factura.pdf');
-                              },
+                              onPressed:  _launchURL,
                             ),
                           ),
                           Divider(
@@ -438,9 +436,7 @@ class _DropDownButtonState extends State<Mis_servicios> {
                                 Icons.file_download,
                                 size: 28.0,
                               ),
-                              onPressed: (){
-
-                              },
+                              onPressed:  _launchURL,
                             ),
                           ),
                           Divider(
@@ -456,9 +452,7 @@ class _DropDownButtonState extends State<Mis_servicios> {
                                 Icons.file_download,
                                 size: 28.0,
                               ),
-                              onPressed: (){
-
-                              },
+                              onPressed:  _launchURL,
                             ),
                           ),
                           Divider(
