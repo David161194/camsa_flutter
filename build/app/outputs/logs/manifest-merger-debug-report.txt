@@ -5,6 +5,32 @@ INJECTED from C:\Users\ajsanchez\Desktop\camsa_flutter\android\app\src\main\Andr
 INJECTED from C:\Users\ajsanchez\Desktop\camsa_flutter\android\app\src\main\AndroidManifest.xml:1:1-33:12
 INJECTED from C:\Users\ajsanchez\Desktop\camsa_flutter\android\app\src\main\AndroidManifest.xml:1:1-33:12
 MERGED from C:\Users\ajsanchez\Desktop\camsa_flutter\android\app\src\main\AndroidManifest.xml:1:1-33:12
+MERGED from [:open_file] C:\Users\ajsanchez\Desktop\camsa_flutter\build\open_file\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:2:1-24:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\legacy-support-v4-1.0.0.aar\002ffdcc1a519df3c93b547c5537f435\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media:media:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\media-1.0.0.aar\b5c5caa1f94dc88f34e39726ed32755e\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\fragment-1.0.0.aar\6b788ac27e0e71eab8790c972b73de1f\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\legacy-support-core-ui-1.0.0.aar\115806e8c9a8622126b0d24ba13e01f7\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\legacy-support-core-utils-1.0.0.aar\050a8de2e37f1740686516ba1c1691ae\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\loader-1.0.0.aar\6b9677f4483e70258bdbbe9bf9bd0d6b\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\viewpager-1.0.0.aar\6d4526013db632e4ed44c3d848357768\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-1.0.0.aar\33303a1a15f2b4a4da5f19a7537eeeba\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\drawerlayout-1.0.0.aar\0a356d7aae9e377690ae1779cf35b125\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-1.0.0.aar\cb71111f872f3ec5cd46919d6bd5de7d\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\customview-1.0.0.aar\ddac5a04b62764559122c3dc1df675f5\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-1.0.0.aar\c7b303348556e8f5ec470fc088f8fa84\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-1.0.0.aar\70f9c182aa0d6794aa2b835529e20bd9\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\core-1.0.0.aar\7cde39e034fc852d8811d7df4f174669\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.0.0.aar\057099da941edded4c25d6bda0941e38\AndroidManifest.xml:17:1-25:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\lifecycle-runtime-2.0.0.aar\d847a9f7a7e2d83837e23266477773f6\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\documentfile-1.0.0.aar\e83769483f6bd959da632d19bc0abcde\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-1.0.0.aar\34257f6944f8caddf361af6ff6797452\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\print-1.0.0.aar\93ea1b7bdd3327d466401c6001ee5624\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\interpolator-1.0.0.aar\3f0cfb7662853b437e72223acc3be9f9\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\cursoradapter-1.0.0.aar\32779c3606ad855df9cb390e733af78f\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\lifecycle-viewmodel-2.0.0.aar\075c764a9f738cfbff7b53a87acc4179\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-2.0.0.aar\fee2df9c3c7bf85f6b895be716228383\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-core-2.0.0.aar\02c961bb42dbc824d179d99e3381d6f3\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\core-runtime-2.0.0.aar\fedc84c3071f97039c1eda45ce779c15\AndroidManifest.xml:17:1-22:12
 INJECTED from C:\Users\ajsanchez\Desktop\camsa_flutter\android\app\src\debug\AndroidManifest.xml:1:1-7:12
 INJECTED from C:\Users\ajsanchez\Desktop\camsa_flutter\android\app\src\debug\AndroidManifest.xml:1:1-7:12
 INJECTED from C:\Users\ajsanchez\Desktop\camsa_flutter\android\app\src\debug\AndroidManifest.xml:1:1-7:12
@@ -24,6 +50,14 @@ INJECTED from C:\Users\ajsanchez\Desktop\camsa_flutter\android\app\src\debug\And
 		ADDED from C:\Users\ajsanchez\Desktop\camsa_flutter\android\app\src\main\AndroidManifest.xml:1:11-69
 application
 ADDED from C:\Users\ajsanchez\Desktop\camsa_flutter\android\app\src\main\AndroidManifest.xml:9:5-32:19
+MERGED from [:open_file] C:\Users\ajsanchez\Desktop\camsa_flutter\build\open_file\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:11:5-22:19
+MERGED from [:open_file] C:\Users\ajsanchez\Desktop\camsa_flutter\build\open_file\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:11:5-22:19
+MERGED from [androidx.core:core:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\core-1.0.0.aar\7cde39e034fc852d8811d7df4f174669\AndroidManifest.xml:22:5-89
+MERGED from [androidx.core:core:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\core-1.0.0.aar\7cde39e034fc852d8811d7df4f174669\AndroidManifest.xml:22:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.0.0.aar\057099da941edded4c25d6bda0941e38\AndroidManifest.xml:22:5-23:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.0.0.aar\057099da941edded4c25d6bda0941e38\AndroidManifest.xml:22:5-23:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\core-1.0.0.aar\7cde39e034fc852d8811d7df4f174669\AndroidManifest.xml:22:18-86
 	android:label
 		ADDED from C:\Users\ajsanchez\Desktop\camsa_flutter\android\app\src\main\AndroidManifest.xml:11:9-37
 	android:icon
@@ -64,6 +98,58 @@ uses-sdk
 INJECTED from C:\Users\ajsanchez\Desktop\camsa_flutter\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\ajsanchez\Desktop\camsa_flutter\android\app\src\main\AndroidManifest.xml
 INJECTED from C:\Users\ajsanchez\Desktop\camsa_flutter\android\app\src\main\AndroidManifest.xml
+MERGED from [:open_file] C:\Users\ajsanchez\Desktop\camsa_flutter\build\open_file\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:6:5-44
+MERGED from [:open_file] C:\Users\ajsanchez\Desktop\camsa_flutter\build\open_file\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:6:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\legacy-support-v4-1.0.0.aar\002ffdcc1a519df3c93b547c5537f435\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\legacy-support-v4-1.0.0.aar\002ffdcc1a519df3c93b547c5537f435\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\media-1.0.0.aar\b5c5caa1f94dc88f34e39726ed32755e\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\media-1.0.0.aar\b5c5caa1f94dc88f34e39726ed32755e\AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\fragment-1.0.0.aar\6b788ac27e0e71eab8790c972b73de1f\AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\fragment-1.0.0.aar\6b788ac27e0e71eab8790c972b73de1f\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\legacy-support-core-ui-1.0.0.aar\115806e8c9a8622126b0d24ba13e01f7\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\legacy-support-core-ui-1.0.0.aar\115806e8c9a8622126b0d24ba13e01f7\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\legacy-support-core-utils-1.0.0.aar\050a8de2e37f1740686516ba1c1691ae\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\legacy-support-core-utils-1.0.0.aar\050a8de2e37f1740686516ba1c1691ae\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\loader-1.0.0.aar\6b9677f4483e70258bdbbe9bf9bd0d6b\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\loader-1.0.0.aar\6b9677f4483e70258bdbbe9bf9bd0d6b\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\viewpager-1.0.0.aar\6d4526013db632e4ed44c3d848357768\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\viewpager-1.0.0.aar\6d4526013db632e4ed44c3d848357768\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-1.0.0.aar\33303a1a15f2b4a4da5f19a7537eeeba\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-1.0.0.aar\33303a1a15f2b4a4da5f19a7537eeeba\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\drawerlayout-1.0.0.aar\0a356d7aae9e377690ae1779cf35b125\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\drawerlayout-1.0.0.aar\0a356d7aae9e377690ae1779cf35b125\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-1.0.0.aar\cb71111f872f3ec5cd46919d6bd5de7d\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-1.0.0.aar\cb71111f872f3ec5cd46919d6bd5de7d\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\customview-1.0.0.aar\ddac5a04b62764559122c3dc1df675f5\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\customview-1.0.0.aar\ddac5a04b62764559122c3dc1df675f5\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-1.0.0.aar\c7b303348556e8f5ec470fc088f8fa84\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-1.0.0.aar\c7b303348556e8f5ec470fc088f8fa84\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-1.0.0.aar\70f9c182aa0d6794aa2b835529e20bd9\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-1.0.0.aar\70f9c182aa0d6794aa2b835529e20bd9\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\core-1.0.0.aar\7cde39e034fc852d8811d7df4f174669\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\core-1.0.0.aar\7cde39e034fc852d8811d7df4f174669\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.0.0.aar\057099da941edded4c25d6bda0941e38\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.0.0.aar\057099da941edded4c25d6bda0941e38\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\lifecycle-runtime-2.0.0.aar\d847a9f7a7e2d83837e23266477773f6\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\lifecycle-runtime-2.0.0.aar\d847a9f7a7e2d83837e23266477773f6\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\documentfile-1.0.0.aar\e83769483f6bd959da632d19bc0abcde\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\documentfile-1.0.0.aar\e83769483f6bd959da632d19bc0abcde\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-1.0.0.aar\34257f6944f8caddf361af6ff6797452\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-1.0.0.aar\34257f6944f8caddf361af6ff6797452\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\print-1.0.0.aar\93ea1b7bdd3327d466401c6001ee5624\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\print-1.0.0.aar\93ea1b7bdd3327d466401c6001ee5624\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\interpolator-1.0.0.aar\3f0cfb7662853b437e72223acc3be9f9\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\interpolator-1.0.0.aar\3f0cfb7662853b437e72223acc3be9f9\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\cursoradapter-1.0.0.aar\32779c3606ad855df9cb390e733af78f\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\cursoradapter-1.0.0.aar\32779c3606ad855df9cb390e733af78f\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\lifecycle-viewmodel-2.0.0.aar\075c764a9f738cfbff7b53a87acc4179\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\lifecycle-viewmodel-2.0.0.aar\075c764a9f738cfbff7b53a87acc4179\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-2.0.0.aar\fee2df9c3c7bf85f6b895be716228383\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-2.0.0.aar\fee2df9c3c7bf85f6b895be716228383\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-core-2.0.0.aar\02c961bb42dbc824d179d99e3381d6f3\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-core-2.0.0.aar\02c961bb42dbc824d179d99e3381d6f3\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\core-runtime-2.0.0.aar\fedc84c3071f97039c1eda45ce779c15\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\ajsanchez\.gradle\caches\transforms-1\files-1.1\core-runtime-2.0.0.aar\fedc84c3071f97039c1eda45ce779c15\AndroidManifest.xml:20:5-44
 INJECTED from C:\Users\ajsanchez\Desktop\camsa_flutter\android\app\src\debug\AndroidManifest.xml
 INJECTED from C:\Users\ajsanchez\Desktop\camsa_flutter\android\app\src\debug\AndroidManifest.xml
 	android:targetSdkVersion
@@ -76,3 +162,29 @@ uses-permission#android.permission.INTERNET
 ADDED from C:\Users\ajsanchez\Desktop\camsa_flutter\android\app\src\debug\AndroidManifest.xml:6:5-66
 	android:name
 		ADDED from C:\Users\ajsanchez\Desktop\camsa_flutter\android\app\src\debug\AndroidManifest.xml:6:22-64
+uses-permission#android.permission.REQUEST_INSTALL_PACKAGES
+ADDED from [:open_file] C:\Users\ajsanchez\Desktop\camsa_flutter\build\open_file\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:8:5-83
+	android:name
+		ADDED from [:open_file] C:\Users\ajsanchez\Desktop\camsa_flutter\build\open_file\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:8:22-80
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from [:open_file] C:\Users\ajsanchez\Desktop\camsa_flutter\build\open_file\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:9:5-80
+	android:name
+		ADDED from [:open_file] C:\Users\ajsanchez\Desktop\camsa_flutter\build\open_file\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:9:22-77
+provider#androidx.core.content.FileProvider
+ADDED from [:open_file] C:\Users\ajsanchez\Desktop\camsa_flutter\build\open_file\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:12:9-21:20
+	android:grantUriPermissions
+		ADDED from [:open_file] C:\Users\ajsanchez\Desktop\camsa_flutter\build\open_file\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:16:13-47
+	android:authorities
+		ADDED from [:open_file] C:\Users\ajsanchez\Desktop\camsa_flutter\build\open_file\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:14:13-64
+	android:exported
+		ADDED from [:open_file] C:\Users\ajsanchez\Desktop\camsa_flutter\build\open_file\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:15:13-37
+	tools:replace
+		ADDED from [:open_file] C:\Users\ajsanchez\Desktop\camsa_flutter\build\open_file\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:17:13-48
+	android:name
+		ADDED from [:open_file] C:\Users\ajsanchez\Desktop\camsa_flutter\build\open_file\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:13:13-62
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from [:open_file] C:\Users\ajsanchez\Desktop\camsa_flutter\build\open_file\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:18:13-20:53
+	android:resource
+		ADDED from [:open_file] C:\Users\ajsanchez\Desktop\camsa_flutter\build\open_file\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:20:17-50
+	android:name
+		ADDED from [:open_file] C:\Users\ajsanchez\Desktop\camsa_flutter\build\open_file\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:19:17-67

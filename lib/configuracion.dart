@@ -12,7 +12,7 @@ class Configuracion extends StatefulWidget {
 class _confi extends State<Configuracion> {
   var _value = "1";
 
-  DropdownButton _itemDown() => DropdownButton<String>(
+  /*DropdownButton _itemDown() => DropdownButton<String>(
     items: [
       DropdownMenuItem(
         value: "1",
@@ -61,7 +61,7 @@ class _confi extends State<Configuracion> {
       fontSize: 18.0,
       fontFamily: "Sabritas",
     ),
-  );
+  );*/
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -108,61 +108,216 @@ class _confi extends State<Configuracion> {
                             top: 20.0, bottom: 20.0, left: 25.0, right: 25.0),
                         child: RaisedButton(
                           textColor: Colors.black,
-                          onPressed: ()=>{
-                            /*Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => SecondScreen ()),
-                        ),*/
+                          onPressed: (){
                             showDialog(
                               context: context,
                               builder: (BuildContext context) {
+                                return StatefulBuilder(
+                                    builder : (context, setState) {
+                                      DropdownButton _itemDown() => DropdownButton<String>(
+                                        items: [
+                                          DropdownMenuItem(
+                                            value: "1",
+                                            child: Row(
 
-                                return AlertDialog(
-                                  title: Text("Cancelar cuenta"),
-                                  content: Container(
-                                    height: 124,
-                                    width: 100,
-                                    child: Column(
-                                      children: <Widget>[
-                                        Container(
-                                          padding: EdgeInsets.symmetric(horizontal: 10),
-                                          color: Colors.white,
-                                          child: _itemDown(),
+                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                              children: <Widget>[
+                                                /* Icon(Icons.account_circle,
+              color: Colors.black,
+            ),*/
+                                                SizedBox(width: 10),
+                                                Text(
+                                                  "Cierre de sucursal",
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                          DropdownMenuItem(
+                                            value: "2",
+                                            child: Row(
+                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                              children: <Widget>[
+                                                /* Icon(Icons.account_circle,
+              color: Colors.black,
+            ),*/
+
+                                                SizedBox(width: 10),
+                                                Text(
+                                                  "Cambio de domicilio",
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                          DropdownMenuItem(
+                                            value: "3",
+                                            child: Row(
+
+                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                              children: <Widget>[
+                                                /* Icon(Icons.account_circle,
+              color: Colors.black,
+            ),*/
+                                                SizedBox(width: 10),
+                                                Text(
+                                                  "Cambio de proveedor",
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                          DropdownMenuItem(
+                                            value: "4",
+                                            child: Row(
+                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                              children: <Widget>[
+                                                /* Icon(Icons.account_circle,
+              color: Colors.black,
+            ),*/
+
+                                                SizedBox(width: 10),
+                                                Text(
+                                                  "No cumplimos sus expectativas",
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                          DropdownMenuItem(
+                                            value: "5",
+                                            child: Row(
+
+                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                              children: <Widget>[
+                                                /* Icon(Icons.account_circle,
+              color: Colors.black,
+            ),*/
+                                                SizedBox(width: 10),
+                                                Text(
+                                                  "Monitoreo propio",
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                          DropdownMenuItem(
+                                            value: "6",
+                                            child: Row(
+                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                              children: <Widget>[
+                                                /* Icon(Icons.account_circle,
+              color: Colors.black,
+            ),*/
+
+                                                SizedBox(width: 10),
+                                                Text(
+                                                  "Problemas económicos",
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                          DropdownMenuItem(
+                                            value: "7",
+                                            child: Row(
+
+                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                              children: <Widget>[
+                                                /* Icon(Icons.account_circle,
+              color: Colors.black,
+            ),*/
+                                                SizedBox(width: 10),
+                                                Text(
+                                                  "Titular falleció",
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                          DropdownMenuItem(
+                                            value: "8",
+                                            child: Row(
+                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                              children: <Widget>[
+                                                /* Icon(Icons.account_circle,
+              color: Colors.black,
+            ),*/
+
+                                                SizedBox(width: 10),
+                                                Text(
+                                                  "Perdida por siniestro natural",
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                          DropdownMenuItem(
+                                            value: "9",
+                                            child: Row(
+
+                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                              children: <Widget>[
+                                                /* Icon(Icons.account_circle,
+              color: Colors.black,
+            ),*/
+                                                SizedBox(width: 10),
+                                                Text(
+                                                  "Otro(especifica)",
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ],
+                                        onChanged: (value) {
+                                          setState(() {
+                                            _value = value;
+                                          });
+                                        },
+
+                                        value: _value,
+                                        elevation: 2,
+                                        isExpanded: true,
+                                        style: TextStyle(
+                                          color: Colors.black54,
+                                          fontSize: 12.0,
+                                          fontFamily: "Sabritas",
                                         ),
-                                        Text("""¿Deseas solicitar una cancelación de cuenta?
+                                      );
+                                      return AlertDialog(
+                                        title: Text("Cancelar cuenta"),
+                                        content: Container(
+                                          height: 124,
+                                          width: 100,
+                                          child: Column(
+                                            children: <Widget>[
+                                              Container(
+                                                padding: EdgeInsets.symmetric(horizontal: 10),
+                                                color: Colors.white,
+                                                child: _itemDown(),
+                                              ),
+                                              Text("""¿Deseas solicitar una cancelación de cuenta?
 En un momento nos estaríamos comunicando contigo."""),
-                                      ],
-                                    ),
-                                  ),
+                                            ],
+                                          ),
+                                        ),
+                                        actions: <Widget>[
+                                          FlatButton(
+                                            child:  Text("Aceptar"),
+                                            onPressed: () {
+                                              //Navigator.pushNamedAndRemoveUntil(context, '/mante', (_) => false);
+                                              // Navigator.popUntil(context, ModalRoute.withName('/mante'));
+                                              // Navigator.of(context).pushReplacementNamed('/mante');
+                                              //Navigator.popAndPushNamed(context, '/mante');
+                                              Navigator.of(context).pop();
+                                            },
+                                          ),
 
-
-
-
-
-
-
-                                  actions: <Widget>[
-                                    FlatButton(
-                                      child:  Text("Aceptar"),
-                                      onPressed: () {
-                                        //Navigator.pushNamedAndRemoveUntil(context, '/mante', (_) => false);
-                                        // Navigator.popUntil(context, ModalRoute.withName('/mante'));
-                                        // Navigator.of(context).pushReplacementNamed('/mante');
-                                        //Navigator.popAndPushNamed(context, '/mante');
-                                        Navigator.of(context).pop();
-                                      },
-                                    ),
-
-                                    FlatButton(
-                                      child:  Text("Cancelar"),
-                                      onPressed: () {
-                                        Navigator.of(context).pop();
-                                      },
-                                    ),
-                                  ],
+                                          FlatButton(
+                                            child:  Text("Cancelar"),
+                                            onPressed: () {
+                                              Navigator.of(context).pop();
+                                            },
+                                          ),
+                                        ],
+                                      );
+                                    },
                                 );
+
                               },
-                            ),
+                            );
                           },
                           color: Colors.red,
                           child:  Text(

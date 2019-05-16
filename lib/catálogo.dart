@@ -5,6 +5,7 @@ bool check2 = false;
 bool check3 = false;
 bool check4 = false;
 bool check5 = false;
+bool check6 = false;
 
 class Catalogo extends StatefulWidget {
   @override
@@ -22,8 +23,11 @@ class _cata extends State<Catalogo> {
             fontFamily: "Sabritas",
           ),
         ),
+        
         centerTitle: true,
       ),
+      resizeToAvoidBottomPadding: false,
+      
       body: Container(
         child: Column(
           children: <Widget>[
@@ -43,8 +47,8 @@ class _cata extends State<Catalogo> {
                         backgroundImage: AssetImage('assets/img/alarma.png'),
                         radius: 28.0,
                       ),
-                      title: Text('Sistema de alarma'),
-                      subtitle: Text("Dispositivos inteligentes instalados en tu hogar que te protegerán ante cualquier intrusión."
+                      title: Text('Sistema de Alarma'),
+                      subtitle: Text("Son capaces de advertir una situación anormal, cumpliendo así, una función disuasoria frente a posibles problemas."
                       ),
                       trailing:    Checkbox(
                         value: check1,
@@ -64,7 +68,9 @@ class _cata extends State<Catalogo> {
                         radius: 28.0,
                       ),
                       title: Text('Cámara'),
-                      subtitle: Text("Dispositivos inteligentes instalados en tu hogar que te protegerán ante cualquier intrusión."
+                      subtitle: 
+                      Text(
+                      "Las cámaras de vigilancia son una de las mejores opciones que tenemos en la actualidad para garantizar que un perímetro está siendo vigilado de forma permanente."
                       ),
                       trailing:    Checkbox(
                         value: check2,
@@ -84,7 +90,8 @@ class _cata extends State<Catalogo> {
                         radius: 28.0,
                       ),
                       title: Text('Incendio'),
-                      subtitle: Text("Dispositivos inteligentes instalados en tu hogar que te protegerán ante cualquier intrusión."
+                      subtitle: Text(
+                        "Avisa a las personas cuando se produce un incendio en sus edificios protegiendo a los que se encuentran dentro para que evacúen el edificio"
                       ),
                       trailing:    Checkbox(
                         value: check3,
@@ -104,7 +111,8 @@ class _cata extends State<Catalogo> {
                         radius: 28.0,
                       ),
                       title: Text('Cerca Eléctrica'),
-                      subtitle: Text("Dispositivos inteligentes instalados en tu hogar que te protegerán ante cualquier intrusión."
+                      subtitle: Text(
+                        "Las cercas electrificadas siempre se encuentran conectadas al sistema de seguridad de la casa, por lo que si alguien la toca, emitirá la señal de alarma a la central de monitoreo."
                       ),
                       trailing:    Checkbox(
                         value: check4,
@@ -123,8 +131,8 @@ class _cata extends State<Catalogo> {
                         backgroundImage: AssetImage('assets/img/control.png'),
                         radius: 28.0,
                       ),
-                      title: Text('Control de acceso'),
-                      subtitle: Text("Dispositivos inteligentes instalados en tu hogar que te protegerán ante cualquier intrusión."
+                      title: Text('Control de Acceso'),
+                      subtitle: Text("Son sistemas que permiten controlar una o más puertas."
                       ),
                       trailing:    Checkbox(
                         value: check5,
@@ -135,8 +143,25 @@ class _cata extends State<Catalogo> {
                         },
                       ),
                     ),
-                    Divider(
+                     Divider(
                       height: 2.0,
+                    ),
+                    ListTile(
+                      leading: CircleAvatar(
+                        backgroundImage: AssetImage('assets/img/Poli.png'),
+                        radius: 28.0,
+                      ),
+                      title: Text('Servicios de Verificación'),
+                      subtitle: Text("Rondines, Base y Permanencia por hora."
+                      ),
+                      trailing:    Checkbox(
+                        value: check6,
+                        onChanged: (bool value) {
+                          setState(() {
+                            check6= value;
+                          });
+                        },
+                      ),
                     ),
                   ],
 
@@ -186,7 +211,7 @@ En un momento nos comunicaremos con usted para concluir con la solicitud. Muchas
           );
         },
         icon: Icon(Icons.send),
-        label: Text("Enviar"),
+        label: Text("Ir"),
 
       ),
     );

@@ -1,6 +1,7 @@
 import 'package:camsa_login/configuracion.dart';
 import 'package:flutter/cupertino.dart';
 import "package:flutter/material.dart";
+import 'package:open_file/open_file.dart';
 
 
 class Mis_servicios extends StatefulWidget {
@@ -19,12 +20,9 @@ class _DropDownButtonState extends State<Mis_servicios> {
 
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
-            Icon(Icons.account_circle,
-              color: Colors.white,
-            ),
             SizedBox(width: 10),
             Text(
-              "Cuenta",
+              "42002088",
             ),
           ],
         ),
@@ -34,13 +32,66 @@ class _DropDownButtonState extends State<Mis_servicios> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
-            Icon(Icons.account_circle,
-              color: Colors.white,
-            ),
 
             SizedBox(width: 10),
             Text(
-              "Cuenta 1",
+              "40001254",
+            ),
+          ],
+        ),
+      ),
+      DropdownMenuItem(
+        value: "3",
+        child: Row(
+
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+
+            SizedBox(width: 10),
+            Text(
+              "40035401",
+            ),
+          ],
+        ),
+      ),
+      DropdownMenuItem(
+        value: "4",
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+
+
+            SizedBox(width: 10),
+            Text(
+              "42002291",
+            ),
+          ],
+        ),
+      ),
+      DropdownMenuItem(
+        value: "5",
+        child: Row(
+
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+
+            SizedBox(width: 10),
+            Text(
+              "42002295",
+            ),
+          ],
+        ),
+      ),
+      DropdownMenuItem(
+        value: "6",
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+
+
+            SizedBox(width: 10),
+            Text(
+              "42002297",
             ),
           ],
         ),
@@ -64,6 +115,16 @@ class _DropDownButtonState extends State<Mis_servicios> {
 
   @override
   Widget build(BuildContext context) {
+    String _openResult = 'Unknown';
+
+    Future<void> openFile() async {
+      final filePath = 'assets/files/factura.pdf';
+      final message = await OpenFile.open(filePath);
+
+      setState(() {
+        _openResult = message;
+      });
+    }
     return Scaffold(
       appBar: AppBar(
         title: Text("Mi Cuenta",
@@ -83,8 +144,8 @@ class _DropDownButtonState extends State<Mis_servicios> {
           padding: EdgeInsets.zero,
           children: <Widget>[
             UserAccountsDrawerHeader(
-              accountName: Text('Antonio'),
-              accountEmail: Text('alonso1611@hotmail.com'),
+              accountName: Text('Centro Automotriz Futurama S.A. de C.V.'),
+              accountEmail: Text('hcarreras@futuramatiresmx.com'),
               currentAccountPicture:
               Container(
                 height: 70,
@@ -153,7 +214,7 @@ class _DropDownButtonState extends State<Mis_servicios> {
                     ),
                  Container(
                       padding: EdgeInsets.symmetric(horizontal: 10),
-                      color: Color(0xFF1D539B),
+                      color: Colors.white,
                       child: _itemDown(),
                     ),
 
@@ -190,7 +251,7 @@ class _DropDownButtonState extends State<Mis_servicios> {
                     Padding(
                       padding: EdgeInsets.only(
                           top: 20.0, bottom: 20.0, left: 25.0, right: 25.0),
-                      child: Text("Periodo             2 - 02/2019",
+                      child: Text("Periodo             2 - 04/2018",
                         style: TextStyle(
                             fontFamily: "Sabritas",
                             fontSize: 14.0,
@@ -351,25 +412,17 @@ class _DropDownButtonState extends State<Mis_servicios> {
                           ),
                           ListTile(
 
-                            title: Text('Mantenimiento 2 - 02/2019'),
-                            subtitle: Text("29/04/2019"
+                            title: Text('Servicio facturado 2 - 05/2019'),
+                            subtitle: Text("16/05/2019"
                             ),
-                            trailing: Icon(
-                              Icons.file_download,
-                              size: 28.0,
-                            ),
-                          ),
-                          Divider(
-                            height: 2.0,
-                          ),
-                          ListTile(
-
-                            title: Text('Instalación 2 - 02/2019'),
-                            subtitle: Text("29/04/2019"
-                            ),
-                            trailing: Icon(
-                              Icons.file_download,
-                              size: 28.0,
+                            trailing: IconButton(
+                              icon: Icon(
+                                Icons.file_download,
+                                size: 28.0,
+                              ),
+                              onPressed: (){
+                                OpenFile.open('assets/factura.pdf');
+                              },
                             ),
                           ),
                           Divider(
@@ -377,12 +430,35 @@ class _DropDownButtonState extends State<Mis_servicios> {
                           ),
                           ListTile(
 
-                            title: Text('Servicio 2 - 02/2019'),
+                            title: Text('Instalación 2 - 04/2018'),
                             subtitle: Text("29/04/2019"
                             ),
-                            trailing: Icon(
-                              Icons.file_download,
-                              size: 28.0,
+                            trailing: IconButton(
+                              icon: Icon(
+                                Icons.file_download,
+                                size: 28.0,
+                              ),
+                              onPressed: (){
+
+                              },
+                            ),
+                          ),
+                          Divider(
+                            height: 2.0,
+                          ),
+                          ListTile(
+
+                            title: Text('Servicio 2 - 04/2018'),
+                            subtitle: Text("29/04/2019"
+                            ),
+                            trailing: IconButton(
+                              icon: Icon(
+                                Icons.file_download,
+                                size: 28.0,
+                              ),
+                              onPressed: (){
+
+                              },
                             ),
                           ),
                           Divider(

@@ -130,7 +130,7 @@ Expanded(
                      child: Container(
                         padding: EdgeInsets.only(right: 15, left: 15, top: 10.0,bottom: 10.0),
                         child: Text(
-                          """Técnico David Robles""",
+                          """Técnico Alejandro Romero""",
                           textAlign: TextAlign.left,
                           style: TextStyle(
                               fontFamily: "Sabritas",
@@ -199,7 +199,7 @@ Expanded(
                       child:Center(
                         child:Container(
                           padding: EdgeInsets.only(top: 0.0),
-                          child: Text ("Día 30/04/19 de las 9:00 a las 15:00",
+                          child: Text ("Día 18/05/19 de las 9:00 a las 15:00",
                             style: TextStyle(
                               fontFamily: "Sabritas",
                               fontSize: 15.0,

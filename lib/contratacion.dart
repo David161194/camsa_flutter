@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 final List<String> imgList = [
   'assets/img/volante_e-02.png',
-  'assets/img/Logoof.png',
-  'assets/img/volante_e-02.png',
+  'assets/img/volante_e-03.png',
+  'assets/img/volante_e-04.png',
 ];
 final List child = map<Widget>(
   imgList,
@@ -84,8 +84,8 @@ class Contratacion extends StatelessWidget{
           padding: EdgeInsets.zero,
           children: <Widget>[
             UserAccountsDrawerHeader(
-              accountName: Text('Antonio'),
-              accountEmail: Text('alonso1611@hotmail.com'),
+              accountName: Text('Centro Automotriz Futurama S.A. de C.V.'),
+              accountEmail: Text('hcarreras@futuramatiresmx.com'),
               currentAccountPicture:
               Container(
                 height: 70,
@@ -204,7 +204,7 @@ class Contratacion extends StatelessWidget{
 
                                   image: DecorationImage(
                                     fit: BoxFit.fill,
-                                    image: ExactAssetImage("assets/img/icono1.jpg"),
+                                    image: ExactAssetImage("assets/img/icono2.jpg"),
                                   ),
                                 ),
 
@@ -224,8 +224,8 @@ class Contratacion extends StatelessWidget{
                               Container(
                                 padding: EdgeInsets.symmetric(vertical: 15, horizontal: 15),
                                 child: Text(
-                                  """Asesora Chloe Moretz
-mail@gmail.com""",
+                                  """Asesora: Mariana Santos P.
+Mdo@central.com.mx""",
                                   textAlign: TextAlign.left,
                                   style: TextStyle(
                                     color: Colors.black54,
@@ -322,8 +322,8 @@ mail@gmail.com""",
                             Container(
                               padding: EdgeInsets.symmetric(vertical: 15, horizontal: 15),
                               child: Text(
-                                """Asesora Chloe Moretz
-mail@gmail.com""",
+                                """Asesora: Chloe Moretz
+Cmo@central.com.mx""",
                                 textAlign: TextAlign.left,
                                 style: TextStyle(
                                   color: Colors.black54,

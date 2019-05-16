@@ -17,73 +17,6 @@ class _LoginPageState extends State<Opiniones>{
   int starCount = 5;
   var _value = "1";
 
-  DropdownButton _itemDown() => DropdownButton<String>(
-    items: [
-      DropdownMenuItem(
-        value: "1",
-        child: Row(
-
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: <Widget>[
-            /*  Icon(Icons.account_circle,
-              color: Colors.black,
-            ),*/
-            SizedBox(width: 10),
-            Text(
-              "Razón",
-            ),
-          ],
-        ),
-      ),
-      DropdownMenuItem(
-        value: "2",
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: <Widget>[
-            /*Icon(Icons.account_circle,
-              color: Colors.black,
-            ),*/
-
-            SizedBox(width: 10),
-            Text(
-              "Razón 1",
-            ),
-          ],
-        ),
-      ),
-      DropdownMenuItem(
-        value: "3",
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: <Widget>[
-            /*Icon(Icons.account_circle,
-              color: Colors.black,
-            ),*/
-
-            SizedBox(width: 10),
-            Text(
-              "Razón 2",
-            ),
-          ],
-        ),
-      ),
-    ],
-    onChanged: (value) {
-      setState(() {
-        _value = value;
-      });
-    },
-
-    value: _value,
-    elevation: 2,
-    isExpanded: true,
-    style: TextStyle(
-      color: Colors.black54,
-      fontSize: 18.0,
-      fontFamily: "Sabritas",
-    ),
-  );
-
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
 
   final FocusNode myFocusNodeEmailLogin = FocusNode();
@@ -126,8 +59,8 @@ class _LoginPageState extends State<Opiniones>{
           padding: EdgeInsets.zero,
           children: <Widget>[
             UserAccountsDrawerHeader(
-              accountName: Text('Antonio'),
-              accountEmail: Text('alonso1611@hotmail.com'),
+              accountName: Text('Centro Automotriz Futurama S.A. de C.V.'),
+              accountEmail: Text('hcarreras@futuramatiresmx.com'),
               currentAccountPicture:
               Container(
                 height: 70,
@@ -206,53 +139,187 @@ class _LoginPageState extends State<Opiniones>{
                               showDialog(
                                 context: context,
                                 builder: (BuildContext context) {
+                                  return StatefulBuilder(
+                                    builder : (context, setState) {
+                                      DropdownButton _itemDown() => DropdownButton<String>(
+                                        items: [
+                                          DropdownMenuItem(
+                                            value: "1",
+                                            child: Row(
 
-                                  return Center(
-                                    child:  AlertDialog(
-                                      title: Text("Envia tu insatisfacción"),
-                                      content:   Container(
-                                        height: 205,
-                                        width: 100,
-                                        child: Column(
-                                          children: <Widget>[
-                                            TextField(
-                                              maxLength: 120,
-                                              maxLines: 5,
-                                              decoration: InputDecoration(
-                                                  border: OutlineInputBorder(),
-                                                  hintText: 'Ingresa tu insatisfacción'
-                                              ),
+                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                              children: <Widget>[
+                                                /* Icon(Icons.account_circle,
+              color: Colors.black,
+            ),*/
+                                                SizedBox(width: 10),
+                                                Text(
+                                                  "Incidencias con el servicio técnico",
+                                                ),
+                                              ],
                                             ),
-                                            Container(
-                                              padding: EdgeInsets.symmetric(horizontal: 10),
-                                              color: Colors.white,
-                                              child: _itemDown(),
+                                          ),
+                                          DropdownMenuItem(
+                                            value: "2",
+                                            child: Row(
+                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                              children: <Widget>[
+                                                /* Icon(Icons.account_circle,
+              color: Colors.black,
+            ),*/
+
+                                                SizedBox(width: 10),
+                                                Text(
+                                                  "No me ha llegado mi cotización",
+                                                ),
+                                              ],
                                             ),
-                                          ],
+                                          ),
+                                          DropdownMenuItem(
+                                            value: "3",
+                                            child: Row(
+
+                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                              children: <Widget>[
+                                                /* Icon(Icons.account_circle,
+              color: Colors.black,
+            ),*/
+                                                SizedBox(width: 10),
+                                                Text(
+                                                  "Respecto a mis pagos y facturas",
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                          DropdownMenuItem(
+                                            value: "4",
+                                            child: Row(
+                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                              children: <Widget>[
+                                                /* Icon(Icons.account_circle,
+              color: Colors.black,
+            ),*/
+
+                                                SizedBox(width: 10),
+                                                Text(
+                                                  "No me llamaron en una activación",
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                          DropdownMenuItem(
+                                            value: "5",
+                                            child: Row(
+
+                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                              children: <Widget>[
+                                                /* Icon(Icons.account_circle,
+              color: Colors.black,
+            ),*/
+                                                SizedBox(width: 10),
+                                                Text(
+                                                  "Via telefónica no me resolvieron",
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                          DropdownMenuItem(
+                                            value: "6",
+                                            child: Row(
+                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                              children: <Widget>[
+                                                /* Icon(Icons.account_circle,
+              color: Colors.black,
+            ),*/
+
+                                                SizedBox(width: 10),
+                                                Text(
+                                                  "Amabilidad del personal",
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                          DropdownMenuItem(
+                                            value: "7",
+                                            child: Row(
+
+                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                              children: <Widget>[
+                                                /* Icon(Icons.account_circle,
+              color: Colors.black,
+            ),*/
+                                                SizedBox(width: 10),
+                                                Text(
+                                                  "Otro (especifíca)",
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ],
+                                        onChanged: (value) {
+                                          setState(() {
+                                            _value = value;
+                                          });
+                                        },
+
+                                        value: _value,
+                                        elevation: 2,
+                                        isExpanded: true,
+                                        style: TextStyle(
+                                          color: Colors.black54,
+                                          fontSize: 11.0,
+                                          fontFamily: "Sabritas",
                                         ),
-                                      ),
-                                      actions: <Widget>[
-                                        FlatButton(
-                                          child:  Text("Envíar"),
-                                          onPressed: () {
-                                            /*Navigator.push(
+                                      );
+                                      return Center(
+                                        child:  AlertDialog(
+                                          title: Text("Envia tu insatisfacción"),
+                                          content:   Container(
+                                            height: 205,
+                                            width: 100,
+                                            child: Column(
+                                              children: <Widget>[
+                                                TextField(
+                                                  maxLength: 120,
+                                                  maxLines: 5,
+                                                  decoration: InputDecoration(
+                                                      border: OutlineInputBorder(),
+                                                      hintText: 'Ingresa tu insatisfacción'
+                                                  ),
+                                                ),
+                                                Container(
+                                                  padding: EdgeInsets.symmetric(horizontal: 10),
+                                                  color: Colors.white,
+                                                  child: _itemDown(),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                          actions: <Widget>[
+                                            FlatButton(
+                                              child:  Text("Envíar"),
+                                              onPressed: () {
+                                                /*Navigator.push(
                                      context,
                                      MaterialPageRoute(builder: (context) => LoginPage()),
                                  );
                          Navigator.pushNamedAndRemoveUntil(context, '/', (_) => false);*/
-                                            Navigator.of(context).pop();
-                                          },
-                                        ),
+                                                Navigator.of(context).pop();
+                                              },
+                                            ),
 
-                                        FlatButton(
-                                          child:  Text("Cancelar"),
-                                          onPressed: () {
-                                            Navigator.of(context).pop();
-                                          },
+                                            FlatButton(
+                                              child:  Text("Cancelar"),
+                                              onPressed: () {
+                                                Navigator.of(context).pop();
+                                              },
+                                            ),
+                                          ],
                                         ),
-                                      ],
-                                    ),
+                                      );
+                                    },
                                   );
+
 
                                 },
                               );

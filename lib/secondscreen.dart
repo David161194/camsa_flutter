@@ -33,8 +33,8 @@ class SecondScreen extends StatelessWidget {
           padding: EdgeInsets.zero,
           children: <Widget>[
             UserAccountsDrawerHeader(
-              accountName: Text('Antonio'),
-              accountEmail: Text('alonso1611@hotmail.com'),
+              accountName: Text('Centro Automotriz Futurama S.A. de C.V.'),
+              accountEmail: Text('hcarreras@futuramatiresmx.com'),
               currentAccountPicture:
               Container(
                 height: 70,
