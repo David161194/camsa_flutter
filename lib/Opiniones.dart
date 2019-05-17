@@ -638,9 +638,7 @@ class _LoginPageState extends State<Opiniones>{
                   Padding(
                     padding: EdgeInsets.only(
                         top: 20.0, bottom: 20.0, left: 25.0, right: 25.0),
-                    child: Text("""Mis insatisfacciones: Por medio de la presente, le hago de conocimiento 
-mi inconformidad con el servicio de entrega y paquetería pues los aparatos que he adquirido en 
-su tienda han llegado dañados.""",
+                    child: Text("""Mi tecnico no se presento el día acordado. Yo puse a su disposición mi tiempo por lo que no me agrada este tipo de respuesta por parte de los trabajadores de su empresa""",
                       style: TextStyle(
                           fontFamily: "Sabritas",
                           fontSize: 16.0,
@@ -692,8 +690,9 @@ su tienda han llegado dañados.""",
                   Padding(
                     padding: EdgeInsets.only(
                         top: 20.0, bottom: 20.0, left: 25.0, right: 25.0),
-                    child: Text("""Mis sugerencias: Recomiendo mejorar el servicio de entrega y paquetería,
-pues los aparatos que he adquirido en su tienda han llegado dañados.""",
+                    child: Text("""¡Capaciten a sus tecnicos mas seguido!, con los que ya tuve el gusto de tratar son un poco deficientes al realizar el trabajo.
+Cumplen con lo prometido pero...se puede hacer mejor y con mas eficacia.
+                    """,
                       style: TextStyle(
                           fontFamily: "Sabritas",
                           fontSize: 16.0,

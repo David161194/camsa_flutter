@@ -1,8 +1,11 @@
 import 'package:camsa_login/cat%C3%A1logo.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:camsa_login/configuracion.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+
+
 final List<String> imgList = [
   'assets/img/volante_e-02.png',
   'assets/img/volante_e-03.png',
@@ -59,6 +62,32 @@ class Contratacion extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
+
+    _ws() async {
+      const url = 'https://wa.me/+5215548441881';
+      if (await canLaunch(url)) {
+        await launch(url);
+      } else {
+        throw 'Could not launch $url';
+      }
+    }
+
+    _callMe() async {
+    // Android
+    const uri = 'tel:+521 55 37 01 34 31';
+    if (await canLaunch(uri)) {
+      await launch(uri);
+    } else {
+      // iOS
+      const uri = 'tel:521-55-19-18-99-54';
+      if (await canLaunch(uri)) {
+        await launch(uri);
+      } else {
+        throw 'Could not launch $uri';
+      }
+    }
+  }
+
     final CarouselSlider manualCarouselDemo = CarouselSlider(
       items: child,
       autoPlay: false,
@@ -241,16 +270,23 @@ Mdo@central.com.mx""",
 
                                   Container(
                                     padding: EdgeInsets.symmetric(horizontal: 40.0),
-                                    child: Icon(Icons.phone,
-                                      size: 28.0,
+                                    child:  InkWell(
+                                    onTap:(){_callMe();},
+                                    child: Icon(
+                                      Icons.phone,
+                                    ),
                                     ),
                                   ),
                                   Container(
-                                    child: Icon(IconData(0xe900, fontFamily: 'whats'),
+                                    child:  InkWell(
+                                    onTap:(){_ws();},
+                                    child: Icon
+                                    (IconData(0xe900, fontFamily: 'whats',),
                                       size: 28.0,
                                       color: Colors.green,
                                     ),
                                   ),
+                                  )
                                 ],
                               ),
 
@@ -337,18 +373,25 @@ Cmo@central.com.mx""",
                             Row(
                               children: <Widget>[
 
-                                Container(
-                                  padding: EdgeInsets.symmetric(horizontal: 40.0),
-                                  child: Icon(Icons.phone,
-                                    size: 28.0,
+                               Container(
+                                    padding: EdgeInsets.symmetric(horizontal: 40.0),
+                                    child:  InkWell(
+                                    onTap:(){_callMe();},
+                                    child: Icon(
+                                      Icons.phone,
+                                    ),
+                                    ),
                                   ),
-                                ),
-                                Container(
-                                  child: Icon(IconData(0xe900, fontFamily: 'whats'),
-                                    size: 28.0,
-                                    color: Colors.green,
+                                  Container(
+                                    child:  InkWell(
+                                    onTap:(){_ws();},
+                                    child: Icon
+                                    (IconData(0xe900, fontFamily: 'whats',),
+                                      size: 28.0,
+                                      color: Colors.green,
+                                    ),
                                   ),
-                                ),
+                                  )
                               ],
                             ),
 
