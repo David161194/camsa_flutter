@@ -152,7 +152,7 @@ class _LoginPageState extends State<LoginPage>
             fontSize: 16.0,
             fontFamily: "WorkSansSemiBold"),
       ),
-      backgroundColor: Colors.blue,
+      backgroundColor: Color(0xFF214575),
       duration: Duration(seconds: 3),
     ));
   }
@@ -339,13 +339,12 @@ class _LoginPageState extends State<LoginPage>
                         ),
                       ),
                       onPressed: () {
-                        //Navigator.pushNamed(context, '/second');
-                       /* Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => SecondScreen()),
-                        );*/
-                        Navigator.pushNamedAndRemoveUntil(context, '/second', (_) => false);
-                        //showInSnackBar("Iniciando Sesión")),
+                       if(loginEmailController.text == "40001254" && loginPasswordController.text == "Camsa123"){
+                         Navigator.pushNamedAndRemoveUntil(context, '/second', (_) => false);
+                       }else{
+                         showInSnackBar("El número de cliente o contraseña es incorrecto");
+                       }
+                       //showInSnackBar("Iniciando Sesión")),
                       /*if (_formKey1.currentState.validate()) {
                              Navigator.push(
                                      context,
